@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SignUpActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/nameEt"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="@string/name"
+                android:autofillHints="@string/name"
+                android:inputType="textPersonName"
+                android:textColorHint="#757575" />
+
+            <EditText
+                android:id="@+id/surnameEt"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:layout_gravity="right"
+                android:ems="10"
+                android:hint="@string/surname"
+                android:autofillHints="@string/surname"
+                android:inputType="textPersonName"
+                android:textColorHint="#757575"
+                tools:ignore="RtlHardcoded" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/peselEt"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="@string/pesel"
+                android:autofillHints="@string/pesel"
+                android:inputType="number"
+                android:textColorHint="#757575" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/birthdateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/birthdate"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/birthdateBtn"
+                android:layout_width="160dp"
+                android:layout_height="56dp"
+                android:text="@string/set_birthdate" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/streetEt"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:autofillHints="@string/street"
+                android:ems="10"
+                android:hint="@string/street"
+                android:inputType="textPersonName"
+                android:textColorHint="#757575" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/townEt"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:autofillHints="@string/town"
+                android:ems="10"
+                android:hint="@string/town"
+                android:inputType="textPersonName"
+                android:textColorHint="#757575" />
+
+            <EditText
+                android:id="@+id/nrEt"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="@string/nr"
+                android:autofillHints="@string/nr"
+                android:inputType="textPersonName"
+                android:textColorHint="#757575" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/postcodeEt"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="@string/post_code"
+                android:autofillHints="@string/post_code"
+                android:inputType="textPostalAddress"
+                android:textColorHint="#757575" />
+
+            <EditText
+                android:id="@+id/postEt"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="@string/post"
+                android:autofillHints="@string/post"
+                android:inputType="textPersonName"
+                android:textColorHint="#757575" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/emailEt"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="@string/email"
+                android:autofillHints="@string/email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#757575" />
+
+            <EditText
+                android:id="@+id/signPasswordEt"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="@string/password"
+                android:autofillHints="@string/password"
+                android:inputType="textPassword"
+                android:textColorHint="#757575" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/phoneEt"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:autofillHints="@string/phone"
+                android:ems="10"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:textColorHint="#757575" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Spinner
+                android:id="@+id/gminyS"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/gmina"
+                android:spinnerMode="dialog" />
+
+            <Spinner
+                android:id="@+id/powiatS"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/powiat"
+                android:spinnerMode="dialog" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/signupBtn"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="@string/sign_up" />
+        </TableRow>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

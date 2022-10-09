@@ -1,0 +1,26 @@
+<resources>
+    <string name="worker">pracownik</string>
+    <string name="inhabitant">mieszkaniec</string>
+
+    <string name="loginOrEmail">Login lub adres email</string>
+    <string name="password">Hasło</string>
+
+    <string name="log_in">Zaloguj</string>
+    <string name="sign_up">Zarejestruj</string>
+
+    <string name="name">Imię</string>
+    <string name="surname">Nazwisko</string>
+    <string name="birthdate">Data urodzenia</string>
+    <string name="town">Miejscowość</string>
+    <string name="street">Ulica (jeśli brak - zostaw puste)</string>
+    <string name="post_code">Kod pocztowy</string>
+    <string name="post">Poczta</string>
+    <string name="phone">Numer telefonu</string>
+    <string name="day">Dzień</string>
+    <string name="month">Miesiąc</string>
+    <string name="year">Rok</string>
+    <string name="set_birthdate">Wybierz datę urodzenia</string>
+
+    <string name="not_all_data">Nie wszystkie dane!</string>
+    <string name="wrong_data">Nieprawidłowe dane!</string>
+</resources>

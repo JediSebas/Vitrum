@@ -1,0 +1,2335 @@
+<resources>
+    <string name="app_name" translatable="false">Vitrum</string>
+    <string name="logo" translatable="false">Logo</string>
+    <string name="worker">worker</string>
+    <string name="inhabitant">inhabitant</string>
+
+    <string name="loginOrEmail">Login or email address</string>
+    <string name="password">Password</string>
+    <string name="log_in">Login</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="sign_up">Sign up</string>
+
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="pesel" translatable="false">PESEL</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="town">Town</string>
+    <string name="street">Street (if missing - leave it)</string>
+    <string name="nr" translatable="false">nr</string>
+    <string name="post_code">Post code</string>
+    <string name="post">Post</string>
+    <string name="phone">Phone number</string>
+    <string name="gmina" translatable="false">Gmina</string>
+    <string name="powiat" translatable="false">Powiat</string>
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="set_birthdate">Set birthdate</string>
+
+    <string name="not_all_data">Not all data!</string>
+    <string name="wrong_data">Wrong data!</string>
+
+    <string name="db_url" translatable="false">jdbc:mysql://192.168.1.185/vitrum</string>
+    <string name="db_username" translatable="false">user</string>
+    <string name="db_password" translatable="false">user</string>
+
+    <string-array name="days">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="months">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="years">
+        <item>1900</item>
+        <item>1901</item>
+        <item>1902</item>
+        <item>1903</item>
+        <item>1904</item>
+        <item>1905</item>
+        <item>1906</item>
+        <item>1907</item>
+        <item>1908</item>
+        <item>1909</item>
+        <item>1910</item>
+        <item>1911</item>
+        <item>1912</item>
+        <item>1913</item>
+        <item>1914</item>
+        <item>1915</item>
+        <item>1916</item>
+        <item>1917</item>
+        <item>1918</item>
+        <item>1919</item>
+        <item>1920</item>
+        <item>1921</item>
+        <item>1922</item>
+        <item>1923</item>
+        <item>1924</item>
+        <item>1925</item>
+        <item>1926</item>
+        <item>1927</item>
+        <item>1928</item>
+        <item>1929</item>
+        <item>1930</item>
+        <item>1931</item>
+        <item>1932</item>
+        <item>1933</item>
+        <item>1934</item>
+        <item>1935</item>
+        <item>1936</item>
+        <item>1937</item>
+        <item>1938</item>
+        <item>1939</item>
+        <item>1940</item>
+        <item>1941</item>
+        <item>1942</item>
+        <item>1943</item>
+        <item>1944</item>
+        <item>1945</item>
+        <item>1946</item>
+        <item>1947</item>
+        <item>1948</item>
+        <item>1949</item>
+        <item>1950</item>
+        <item>1951</item>
+        <item>1952</item>
+        <item>1953</item>
+        <item>1954</item>
+        <item>1955</item>
+        <item>1956</item>
+        <item>1957</item>
+        <item>1958</item>
+        <item>1959</item>
+        <item>1960</item>
+        <item>1961</item>
+        <item>1962</item>
+        <item>1963</item>
+        <item>1964</item>
+        <item>1965</item>
+        <item>1966</item>
+        <item>1967</item>
+        <item>1968</item>
+        <item>1969</item>
+        <item>1970</item>
+        <item>1971</item>
+        <item>1972</item>
+        <item>1973</item>
+        <item>1974</item>
+        <item>1975</item>
+        <item>1976</item>
+        <item>1977</item>
+        <item>1978</item>
+        <item>1979</item>
+        <item>1980</item>
+        <item>1981</item>
+        <item>1982</item>
+        <item>1983</item>
+        <item>1984</item>
+        <item>1985</item>
+        <item>1986</item>
+        <item>1987</item>
+        <item>1988</item>
+        <item>1989</item>
+        <item>1990</item>
+        <item>1991</item>
+        <item>1992</item>
+        <item>1993</item>
+        <item>1994</item>
+        <item>1995</item>
+        <item>1996</item>
+        <item>1997</item>
+        <item>1998</item>
+        <item>1999</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2004</item>
+        <item>2005</item>
+        <item>2006</item>
+        <item>2007</item>
+        <item>2008</item>
+        <item>2009</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+    </string-array>
+
+    <string-array name="gminy">
+        <item>Gmina</item>
+        <item>Adamów</item>
+        <item>Adamówka</item>
+        <item>Aleksandrów Łódzki</item>
+        <item>Andrychów</item>
+        <item>Augustów</item>
+        <item>Babiak</item>
+        <item>Babimost</item>
+        <item>Baborów</item>
+        <item>Baboszewo</item>
+        <item>Bakałarzewo</item>
+        <item>Baligród</item>
+        <item>Banie</item>
+        <item>Banie Mazurskie</item>
+        <item>Baranowo</item>
+        <item>Baranów</item>
+        <item>Barciany</item>
+        <item>Barcin</item>
+        <item>Barczewo</item>
+        <item>Bardo</item>
+        <item>Bargłów Kościelny</item>
+        <item>Barlinek</item>
+        <item>Bartniczka</item>
+        <item>Bartoszyce</item>
+        <item>Barwice</item>
+        <item>Bedlno</item>
+        <item>Belsk Duży</item>
+        <item>Bemowo</item>
+        <item>Besko</item>
+        <item>Bestwina</item>
+        <item>Bełchatów</item>
+        <item>Bełżec</item>
+        <item>Bełżyce</item>
+        <item>Biała</item>
+        <item>Biała Piska</item>
+        <item>Biała Podlaska</item>
+        <item>Biała Rawska</item>
+        <item>Białaczów</item>
+        <item>Białe Błota</item>
+        <item>Białobrzegi</item>
+        <item>Białogard</item>
+        <item>Białopole</item>
+        <item>Białołęka</item>
+        <item>Białośliwie</item>
+        <item>Biały Bór</item>
+        <item>Bielawa</item>
+        <item>Bielawy</item>
+        <item>Bielice</item>
+        <item>Bielsk</item>
+        <item>Bielsk Podlaski</item>
+        <item>Bierutów</item>
+        <item>Bieruń</item>
+        <item>Bierzwnik</item>
+        <item>Biesiekierz</item>
+        <item>Bieżuń</item>
+        <item>Bircza</item>
+        <item>Biskupice</item>
+        <item>Biskupiec</item>
+        <item>Biszcza</item>
+        <item>Bisztynek</item>
+        <item>Biłgoraj</item>
+        <item>Bledzew</item>
+        <item>Blizanów</item>
+        <item>Bobolice</item>
+        <item>Bobowa</item>
+        <item>Bobowo</item>
+        <item>Bobrowice</item>
+        <item>Bobrowniki</item>
+        <item>Bobrowo</item>
+        <item>Bodzechów</item>
+        <item>Bodzentyn</item>
+        <item>Bogatynia</item>
+        <item>Bogdaniec</item>
+        <item>Boguchwała</item>
+        <item>Bojadła</item>
+        <item>Bojanowo</item>
+        <item>Boleszkowice</item>
+        <item>Bolesławiec</item>
+        <item>Bolimów</item>
+        <item>Bolków</item>
+        <item>Boniewo</item>
+        <item>Borek Wielkopolski</item>
+        <item>Borki</item>
+        <item>Borne Sulinowo</item>
+        <item>Borzytuchom</item>
+        <item>Borzęcin</item>
+        <item>Borów</item>
+        <item>Boćki</item>
+        <item>Bralin</item>
+        <item>Branice</item>
+        <item>Braniewo</item>
+        <item>Brańsk</item>
+        <item>Brenna</item>
+        <item>Brodnica</item>
+        <item>Brody</item>
+        <item>Brojce</item>
+        <item>Brudzew</item>
+        <item>Brudzeń Duży</item>
+        <item>Brusy</item>
+        <item>Brwinów</item>
+        <item>Brzeg</item>
+        <item>Brzeg Dolny</item>
+        <item>Brzesko</item>
+        <item>Brzeszcze</item>
+        <item>Brzeziny</item>
+        <item>Brześć Kujawski</item>
+        <item>Brzeźnica</item>
+        <item>Brzeźnio</item>
+        <item>Brzeżno</item>
+        <item>Brzozie</item>
+        <item>Brzozów</item>
+        <item>Brzuze</item>
+        <item>Brzyska</item>
+        <item>Buczek</item>
+        <item>Buczkowice</item>
+        <item>Budry</item>
+        <item>Budziszewice</item>
+        <item>Budzyń</item>
+        <item>Budzów</item>
+        <item>Buk</item>
+        <item>Bukowiec</item>
+        <item>Bukowina Tatrzańska</item>
+        <item>Bukowsko</item>
+        <item>Bulkowo</item>
+        <item>Burzenin</item>
+        <item>Busko-Zdrój</item>
+        <item>Bychawa</item>
+        <item>Byczyna</item>
+        <item>Bystrzyca Kłodzka</item>
+        <item>Bytnica</item>
+        <item>Bytom Odrzański</item>
+        <item>Bytoń</item>
+        <item>Bytów</item>
+        <item>Będzin</item>
+        <item>Będzino</item>
+        <item>Błaszki</item>
+        <item>Błonie</item>
+        <item>Błędów</item>
+        <item>Cedry Wielkie</item>
+        <item>Cedynia</item>
+        <item>Cegłów</item>
+        <item>Cekcyn</item>
+        <item>Ceków-Kolonia</item>
+        <item>Ceranów</item>
+        <item>Cewice</item>
+        <item>Charsznica</item>
+        <item>Chełm</item>
+        <item>Chełm Śląski</item>
+        <item>Chełmek</item>
+        <item>Chełmiec</item>
+        <item>Chełmno</item>
+        <item>Chełmża</item>
+        <item>Chmielnik</item>
+        <item>Chmielno</item>
+        <item>Choceń</item>
+        <item>Chocianów</item>
+        <item>Chociwel</item>
+        <item>Choczewo</item>
+        <item>Chodecz</item>
+        <item>Chodel</item>
+        <item>Chodzież</item>
+        <item>Chodów</item>
+        <item>Chojna</item>
+        <item>Chojnice</item>
+        <item>Chojnów</item>
+        <item>Chorkówka</item>
+        <item>Chorzele</item>
+        <item>Choszczno</item>
+        <item>Chrostkowo</item>
+        <item>Chrzypsko Wielkie</item>
+        <item>Chrząstowice</item>
+        <item>Chybie</item>
+        <item>Chynów</item>
+        <item>Chłopice</item>
+        <item>Ciasna</item>
+        <item>Ciechanowiec</item>
+        <item>Ciechanów</item>
+        <item>Ciechocin</item>
+        <item>Cielądz</item>
+        <item>Ciepielów</item>
+        <item>Ciepłowody</item>
+        <item>Cieszanów</item>
+        <item>Cieszków</item>
+        <item>Cieszyn</item>
+        <item>Cisek</item>
+        <item>Cmolas</item>
+        <item>Cybinka</item>
+        <item>Cyców</item>
+        <item>Czajków</item>
+        <item>Czaplinek</item>
+        <item>Czarna</item>
+        <item>Czarna Dąbrówka</item>
+        <item>Czarne</item>
+        <item>Czarnków</item>
+        <item>Czarnocin</item>
+        <item>Czarnożyły</item>
+        <item>Czarny Bór</item>
+        <item>Czechowice-Dziedzice</item>
+        <item>Czemierniki</item>
+        <item>Czempiń</item>
+        <item>Czeremcha</item>
+        <item>Czermin</item>
+        <item>Czernica</item>
+        <item>Czernice Borowe</item>
+        <item>Czernichów</item>
+        <item>Czerniejewo</item>
+        <item>Czerniewice</item>
+        <item>Czernikowo</item>
+        <item>Czersk</item>
+        <item>Czerwieńsk</item>
+        <item>Czerwin</item>
+        <item>Czerwionka-Leszczyny</item>
+        <item>Czerwonak</item>
+        <item>Czosnów</item>
+        <item>Czudec</item>
+        <item>Czyże</item>
+        <item>Czyżew</item>
+        <item>Człopa</item>
+        <item>Człuchów</item>
+        <item>Dalików</item>
+        <item>Damasławek</item>
+        <item>Damnica</item>
+        <item>Darłowo</item>
+        <item>Daszyna</item>
+        <item>Debrzno</item>
+        <item>Deszczno</item>
+        <item>Dmosin</item>
+        <item>Dobiegniew</item>
+        <item>Dobra</item>
+        <item>Dobra (Szczecińska)</item>
+        <item>Dobrcz</item>
+        <item>Dobre</item>
+        <item>Dobre Miasto</item>
+        <item>Dobrodzień</item>
+        <item>Dobromierz</item>
+        <item>Dobroszyce</item>
+        <item>Dobroń</item>
+        <item>Dobrzany</item>
+        <item>Dobrzyca</item>
+        <item>Dobrzyń nad Wisłą</item>
+        <item>Dolice</item>
+        <item>Dolsk</item>
+        <item>Domaniewice</item>
+        <item>Domaniów</item>
+        <item>Domaszowice</item>
+        <item>Dominowo</item>
+        <item>Dopiewo</item>
+        <item>Dorohusk</item>
+        <item>Doruchów</item>
+        <item>Dołhobyczów</item>
+        <item>Dragacz</item>
+        <item>Drawno</item>
+        <item>Drawsko</item>
+        <item>Drawsko Pomorskie</item>
+        <item>Drezdenko</item>
+        <item>Drobin</item>
+        <item>Drużbice</item>
+        <item>Drwinia</item>
+        <item>Drzycim</item>
+        <item>Dubeninki</item>
+        <item>Dubicze Cerkiewne</item>
+        <item>Dubiecko</item>
+        <item>Dubienka</item>
+        <item>Dukla</item>
+        <item>Duszniki</item>
+        <item>Dwikozy</item>
+        <item>Dydnia</item>
+        <item>Dygowo</item>
+        <item>Dynów</item>
+        <item>Dywity</item>
+        <item>Dziadowa Kłoda</item>
+        <item>Działdowo</item>
+        <item>Dziemiany</item>
+        <item>Dzierzgowo</item>
+        <item>Dzierzgoń</item>
+        <item>Dzierzkowice</item>
+        <item>Dzierzążnia</item>
+        <item>Dzierżoniów</item>
+        <item>Dzikowiec</item>
+        <item>Dziwnów</item>
+        <item>Dzwola</item>
+        <item>Dąbie</item>
+        <item>Dąbrowa</item>
+        <item>Dąbrowa Białostocka</item>
+        <item>Dąbrowa Biskupia</item>
+        <item>Dąbrowa Chełmińska</item>
+        <item>Dąbrowa Zielona</item>
+        <item>Dąbrówno</item>
+        <item>Dębe Wielkie</item>
+        <item>Dębica</item>
+        <item>Dębnica Kaszubska</item>
+        <item>Dębno</item>
+        <item>Dębowa Kłoda</item>
+        <item>Dębowa Łąka</item>
+        <item>Dębowiec</item>
+        <item>Długołęka</item>
+        <item>Dłutów</item>
+        <item>Dźwierzuty</item>
+        <item>Elbląg</item>
+        <item>Ełk</item>
+        <item>Fabianki</item>
+        <item>Fajsławice</item>
+        <item>Fałków</item>
+        <item>Filipów</item>
+        <item>Frampol</item>
+        <item>Fredropol</item>
+        <item>Frombork</item>
+        <item>Frysztak</item>
+        <item>Garbatka-Letnisko</item>
+        <item>Garbów</item>
+        <item>Gardeja</item>
+        <item>Gaszowice</item>
+        <item>Gaworzyce</item>
+        <item>Gać</item>
+        <item>Gdów</item>
+        <item>Giby</item>
+        <item>Gidle</item>
+        <item>Gietrzwałd</item>
+        <item>Gilowice</item>
+        <item>Giżycko</item>
+        <item>Glinojeck</item>
+        <item>Gniew</item>
+        <item>Gniewino</item>
+        <item>Gniewkowo</item>
+        <item>Gniewoszów</item>
+        <item>Gniezno</item>
+        <item>Goczałkowice-Zdrój</item>
+        <item>Godkowo</item>
+        <item>Godów</item>
+        <item>Gogolin</item>
+        <item>Golczewo</item>
+        <item>Goleniów</item>
+        <item>Goleszów</item>
+        <item>Golub-Dobrzyń</item>
+        <item>Gomunice</item>
+        <item>Goniądz</item>
+        <item>Goraj</item>
+        <item>Gorlice</item>
+        <item>Gorzkowice</item>
+        <item>Gorzyce</item>
+        <item>Gorzów Śląski</item>
+        <item>Gostycyn</item>
+        <item>Gostynin</item>
+        <item>Gostyń</item>
+        <item>Goszczyn</item>
+        <item>Goworowo</item>
+        <item>Gozdowo</item>
+        <item>Gołańcz</item>
+        <item>Gołcza</item>
+        <item>Gołdap</item>
+        <item>Gołuchów</item>
+        <item>Gołymin-Ośrodek</item>
+        <item>Gościeradów</item>
+        <item>Gościno</item>
+        <item>Gościno (arch)</item>
+        <item>Grabica</item>
+        <item>Grabowiec</item>
+        <item>Grabowo</item>
+        <item>Grabów</item>
+        <item>Grabów nad Pilicą</item>
+        <item>Grajewo</item>
+        <item>Granowo</item>
+        <item>Grodków</item>
+        <item>Grodziczno</item>
+        <item>Grodziec</item>
+        <item>Grodzisk Mazowiecki</item>
+        <item>Grodzisk Wielkopolski</item>
+        <item>Grodzisko Dolne</item>
+        <item>Gromadka</item>
+        <item>Gronowo Elbląskie</item>
+        <item>Grudusk</item>
+        <item>Grudziądz</item>
+        <item>Grunwald</item>
+        <item>Gruta</item>
+        <item>Grybów</item>
+        <item>Gryfice</item>
+        <item>Gryfino</item>
+        <item>Gryfów Śląski</item>
+        <item>Grzmiąca</item>
+        <item>Gródek</item>
+        <item>Grójec</item>
+        <item>Grębków</item>
+        <item>Grębocice</item>
+        <item>Grębów</item>
+        <item>Gubin</item>
+        <item>Góra</item>
+        <item>Góra Kalwaria</item>
+        <item>Górowo Iławeckie</item>
+        <item>Górzyca</item>
+        <item>Gąbin</item>
+        <item>Gąsawa</item>
+        <item>Głogów</item>
+        <item>Głogów Małopolski</item>
+        <item>Głogówek</item>
+        <item>Głowaczów</item>
+        <item>Głowno</item>
+        <item>Głubczyce</item>
+        <item>Głuchołazy</item>
+        <item>Główczyce</item>
+        <item>Haczów</item>
+        <item>Hajnówka</item>
+        <item>Hanna</item>
+        <item>Hańsk</item>
+        <item>Hażlach</item>
+        <item>Herby</item>
+        <item>Horodło</item>
+        <item>Horyniec-Zdrój</item>
+        <item>Hrubieszów</item>
+        <item>Huszlew</item>
+        <item>Igołomia-Wawrzeńczyce</item>
+        <item>Imielin</item>
+        <item>Imielno</item>
+        <item>Inowrocław</item>
+        <item>Irządze</item>
+        <item>Iwierzyce</item>
+        <item>Iwonicz-Zdrój</item>
+        <item>Izbica Kujawska</item>
+        <item>Iława</item>
+        <item>Iłowa</item>
+        <item>Iłowo-Osada</item>
+        <item>Iłów</item>
+        <item>Iłża</item>
+        <item>Ińsko</item>
+        <item>Jabłonna</item>
+        <item>Jabłonna Lacka</item>
+        <item>Jabłonowo Pomorskie</item>
+        <item>Jabłoń</item>
+        <item>Jadów</item>
+        <item>Jakubów</item>
+        <item>Janikowo</item>
+        <item>Janowice Wielkie</item>
+        <item>Janowiec Kościelny</item>
+        <item>Janowiec Wielkopolski</item>
+        <item>Janowo</item>
+        <item>Janów</item>
+        <item>Janów Lubelski</item>
+        <item>Janów Podlaski</item>
+        <item>Jaraczewo</item>
+        <item>Jarczów</item>
+        <item>Jarocin</item>
+        <item>Jarosław</item>
+        <item>Jasienica</item>
+        <item>Jasienica Rosielna</item>
+        <item>Jasień</item>
+        <item>Jasionówka</item>
+        <item>Jastków</item>
+        <item>Jastrowie</item>
+        <item>Jasło</item>
+        <item>Jawor</item>
+        <item>Jaworze</item>
+        <item>Jaworzyna Śląska</item>
+        <item>Jaśliska</item>
+        <item>Jaświły</item>
+        <item>Jedlicze</item>
+        <item>Jedlina-Zdrój</item>
+        <item>Jedlińsk</item>
+        <item>Jednorożec</item>
+        <item>Jedwabno</item>
+        <item>Jelcz-Laskowice</item>
+        <item>Jeleniewo</item>
+        <item>Jeleśnia</item>
+        <item>Jemielnica</item>
+        <item>Jemielno</item>
+        <item>Jerzmanowa</item>
+        <item>Jerzmanowice-Przeginia</item>
+        <item>Jeziora Wielkie</item>
+        <item>Jeziorany</item>
+        <item>Jeziorzany</item>
+        <item>Jeżewo</item>
+        <item>Jeżów</item>
+        <item>Jeżów Sudecki</item>
+        <item>Jodłownik</item>
+        <item>Jonkowo</item>
+        <item>Jordanów Śląski</item>
+        <item>Juchnowiec Kościelny</item>
+        <item>Jutrosin</item>
+        <item>Józefów nad Wisłą</item>
+        <item>Jędrzejów</item>
+        <item>Kaczory</item>
+        <item>Kalinowo</item>
+        <item>Kaliska</item>
+        <item>Kalisz Pomorski</item>
+        <item>Kalwaria Zebrzydowska</item>
+        <item>Kamieniec</item>
+        <item>Kamieniec Ząbkowicki</item>
+        <item>Kamienna Góra</item>
+        <item>Kamiennik</item>
+        <item>Kamień</item>
+        <item>Kamień Krajeński</item>
+        <item>Kamień Pomorski</item>
+        <item>Kamieńsk</item>
+        <item>Kamionka</item>
+        <item>Kampinos</item>
+        <item>Kargowa</item>
+        <item>Karlino</item>
+        <item>Karnice</item>
+        <item>Karpacz</item>
+        <item>Karsin</item>
+        <item>Kartuzy</item>
+        <item>Kazimierz Biskupi</item>
+        <item>Kazimierza Wielka</item>
+        <item>Kałuszyn</item>
+        <item>Kańczuga</item>
+        <item>Kaźmierz</item>
+        <item>Kcynia</item>
+        <item>Kiernozia</item>
+        <item>Kietrz</item>
+        <item>Kijewo Królewskie</item>
+        <item>Kikół</item>
+        <item>Kisielice</item>
+        <item>Kiszkowo</item>
+        <item>Kiwity</item>
+        <item>Kleczew</item>
+        <item>Kleszczele</item>
+        <item>Kleszczewo</item>
+        <item>Kleszczów</item>
+        <item>Klimontów</item>
+        <item>Kluczbork</item>
+        <item>Kluczewsko</item>
+        <item>Kluki</item>
+        <item>Knurów</item>
+        <item>Knyszyn</item>
+        <item>Kobiele Wielkie</item>
+        <item>Kobierzyce</item>
+        <item>Kobyla Góra</item>
+        <item>Kobylanka</item>
+        <item>Kobylin-Borzymy</item>
+        <item>Kobylnica</item>
+        <item>Kochanowice</item>
+        <item>Kock</item>
+        <item>Kocmyrzów-Luborzyca</item>
+        <item>Koczała</item>
+        <item>Kodeń</item>
+        <item>Kodrąb</item>
+        <item>Kolbudy</item>
+        <item>Kolbuszowa</item>
+        <item>Kolno</item>
+        <item>Kolonowskie</item>
+        <item>Kolsko</item>
+        <item>Komarów-Osada</item>
+        <item>Komańcza</item>
+        <item>Komorniki</item>
+        <item>Komprachcice</item>
+        <item>Konarzyny</item>
+        <item>Kondratowice</item>
+        <item>Koniecpol</item>
+        <item>Koniusza</item>
+        <item>Konopnica</item>
+        <item>Konstancin-Jeziorna</item>
+        <item>Konstantynów</item>
+        <item>Konstantynów Łódzki</item>
+        <item>Korczew</item>
+        <item>Korfantów</item>
+        <item>Kornowac</item>
+        <item>Koronowo</item>
+        <item>Korsze</item>
+        <item>Korytnica</item>
+        <item>Korzenna</item>
+        <item>Kosakowo</item>
+        <item>Kostomłoty</item>
+        <item>Kostrzyn</item>
+        <item>Kostrzyn nad Odrą</item>
+        <item>Koszarawa</item>
+        <item>Koszyce</item>
+        <item>Koszęcin</item>
+        <item>Kotla</item>
+        <item>Kotlin</item>
+        <item>Kotuń</item>
+        <item>Kowal</item>
+        <item>Kowala</item>
+        <item>Kowale Oleckie</item>
+        <item>Kowalewo Pomorskie</item>
+        <item>Kowary</item>
+        <item>Kozielice</item>
+        <item>Kozienice</item>
+        <item>Kozy</item>
+        <item>Kozłowo</item>
+        <item>Kozłów</item>
+        <item>Kołaczkowo</item>
+        <item>Kołbaskowo</item>
+        <item>Kołczygłowy</item>
+        <item>Kołobrzeg</item>
+        <item>Końskie</item>
+        <item>Końskowola</item>
+        <item>Kościan</item>
+        <item>Kościelec</item>
+        <item>Kościerzyna</item>
+        <item>Koźmin Wielkopolski</item>
+        <item>Kożuchów</item>
+        <item>Krajenka</item>
+        <item>Kraków-Krowodrza</item>
+        <item>Kraków-Nowa Huta</item>
+        <item>Kraków-Podgórze</item>
+        <item>Kraków-Śródmieście</item>
+        <item>Kramsk</item>
+        <item>Krapkowice</item>
+        <item>Krasiczyn</item>
+        <item>Krasne</item>
+        <item>Krasnobród</item>
+        <item>Krasnopol</item>
+        <item>Krasnystaw</item>
+        <item>Krasocin</item>
+        <item>Kraszewice</item>
+        <item>Kraśniczyn</item>
+        <item>Kraśnik</item>
+        <item>Krempna</item>
+        <item>Krobia</item>
+        <item>Krokowa</item>
+        <item>Krosno Odrzańskie</item>
+        <item>Krotoszyce</item>
+        <item>Krotoszyn</item>
+        <item>Krośnice</item>
+        <item>Krośniewice</item>
+        <item>Kruklanki</item>
+        <item>Kruszwica</item>
+        <item>Kruszyna</item>
+        <item>Krynica Morska</item>
+        <item>Krynica-Zdrój</item>
+        <item>Krynice</item>
+        <item>Krynki</item>
+        <item>Krynki (arch)</item>
+        <item>Krypno</item>
+        <item>Krzanowice</item>
+        <item>Krzemieniewo</item>
+        <item>Krzeszowice</item>
+        <item>Krzeszyce</item>
+        <item>Krzeszów</item>
+        <item>Krzykosy</item>
+        <item>Krzymów</item>
+        <item>Krzynowłoga Mała</item>
+        <item>Krzywda</item>
+        <item>Krzywiń</item>
+        <item>Krzyż Wielkopolski</item>
+        <item>Krzyżanowice</item>
+        <item>Krzyżanów</item>
+        <item>Krzęcin</item>
+        <item>Ksawerów</item>
+        <item>Książ Wielki</item>
+        <item>Książ Wielkopolski</item>
+        <item>Książki</item>
+        <item>Księżpol</item>
+        <item>Kuczbork-Osada</item>
+        <item>Kudowa-Zdrój</item>
+        <item>Kunice</item>
+        <item>Kuryłówka</item>
+        <item>Kurzętnik</item>
+        <item>Kutno</item>
+        <item>Kuślin</item>
+        <item>Kuźnica</item>
+        <item>Kwidzyn</item>
+        <item>Kwilcz</item>
+        <item>Kórnik</item>
+        <item>Kąty Wrocławskie</item>
+        <item>Kędzierzyn-Koźle</item>
+        <item>Kępice</item>
+        <item>Kępno</item>
+        <item>Kęsowo</item>
+        <item>Kętrzyn</item>
+        <item>Kęty</item>
+        <item>Kłaj</item>
+        <item>Kłecko</item>
+        <item>Kłoczew</item>
+        <item>Kłodawa</item>
+        <item>Kłodzko</item>
+        <item>Kłomnice</item>
+        <item>Lanckorona</item>
+        <item>Lasowice Wielkie</item>
+        <item>Laszki</item>
+        <item>Latowicz</item>
+        <item>Legnickie Pole</item>
+        <item>Lelkowo</item>
+        <item>Lelów</item>
+        <item>Lesko</item>
+        <item>Leszno</item>
+        <item>Lesznowola</item>
+        <item>Lewin Brzeski</item>
+        <item>Lewin Kłodzki</item>
+        <item>Leśna</item>
+        <item>Leśna Podlaska</item>
+        <item>Leśnica</item>
+        <item>Leżajsk</item>
+        <item>Lichnowy</item>
+        <item>Lidzbark</item>
+        <item>Lidzbark Warmiński</item>
+        <item>Limanowa</item>
+        <item>Linia</item>
+        <item>Liniewo</item>
+        <item>Lipiany</item>
+        <item>Lipie</item>
+        <item>Lipinki Łużyckie</item>
+        <item>Lipka</item>
+        <item>Lipnica</item>
+        <item>Lipnik</item>
+        <item>Lipno</item>
+        <item>Lipowa</item>
+        <item>Lipowiec Kościelny</item>
+        <item>Lipusz</item>
+        <item>Lisewo</item>
+        <item>Liszki</item>
+        <item>Liw</item>
+        <item>Lniano</item>
+        <item>Lubaczów</item>
+        <item>Lubartów</item>
+        <item>Lubasz</item>
+        <item>Lubawa</item>
+        <item>Lubawka</item>
+        <item>Lubań</item>
+        <item>Lubichowo</item>
+        <item>Lubicz</item>
+        <item>Lubiewo</item>
+        <item>Lubień Kujawski</item>
+        <item>Lubin</item>
+        <item>Lubiszyn</item>
+        <item>Lubliniec</item>
+        <item>Lubniewice</item>
+        <item>Lubomia</item>
+        <item>Lubomierz</item>
+        <item>Lubomino</item>
+        <item>Lubowidz</item>
+        <item>Lubraniec</item>
+        <item>Lubrza</item>
+        <item>Lubsko</item>
+        <item>Lubsza</item>
+        <item>Lubycza Królewska</item>
+        <item>Lubycza Królewska (arch)</item>
+        <item>Ludwin</item>
+        <item>Lutocin</item>
+        <item>Lutomiersk</item>
+        <item>Lutowiska</item>
+        <item>Lututów</item>
+        <item>Luzino</item>
+        <item>Lwówek</item>
+        <item>Lwówek Śląski</item>
+        <item>Lyski</item>
+        <item>Lądek</item>
+        <item>Lądek-Zdrój</item>
+        <item>Lębork</item>
+        <item>M. Białystok</item>
+        <item>M. Bielsko-Biała</item>
+        <item>M. Bydgoszcz</item>
+        <item>M. Bytom</item>
+        <item>M. Chorzów</item>
+        <item>M. Częstochowa</item>
+        <item>M. Elbląg</item>
+        <item>M. Gdańsk</item>
+        <item>M. Gdynia</item>
+        <item>M. Gliwice</item>
+        <item>M. Gorzów Wielkopolski</item>
+        <item>M. Grudziądz</item>
+        <item>M. Jastrzębie-Zdrój</item>
+        <item>M. Jelenia Góra</item>
+        <item>M. Kalisz</item>
+        <item>M. Konin</item>
+        <item>M. Koszalin</item>
+        <item>M. Krosno</item>
+        <item>M. Legnica</item>
+        <item>M. Leszno</item>
+        <item>M. Lublin</item>
+        <item>M. Mysłowice</item>
+        <item>M. Nowy Sącz</item>
+        <item>M. Olsztyn</item>
+        <item>M. Opole</item>
+        <item>M. Ostrołęka</item>
+        <item>M. Piekary Śląskie</item>
+        <item>M. Poznań</item>
+        <item>M. Przemyśl</item>
+        <item>M. Płock</item>
+        <item>M. Radom</item>
+        <item>M. Ruda Śląska</item>
+        <item>M. Rybnik</item>
+        <item>M. Rzeszów</item>
+        <item>M. Siedlce</item>
+        <item>M. Siemianowice Śląskie</item>
+        <item>M. Sopot</item>
+        <item>M. Suwałki</item>
+        <item>M. Szczecin</item>
+        <item>M. Słupsk</item>
+        <item>M. Tarnów</item>
+        <item>M. Toruń</item>
+        <item>M. Tychy</item>
+        <item>M. Wałbrzych</item>
+        <item>M. Wrocław</item>
+        <item>M. Włocławek</item>
+        <item>M. Zabrze</item>
+        <item>M. Zamość</item>
+        <item>M. Zielona Góra</item>
+        <item>M. Świnoujście</item>
+        <item>M. Żory</item>
+        <item>Maciejowice</item>
+        <item>Magnuszew</item>
+        <item>Maków Podhalański</item>
+        <item>Malanów</item>
+        <item>Malbork</item>
+        <item>Malczyce</item>
+        <item>Malechowo</item>
+        <item>Manowo</item>
+        <item>Marcinowice</item>
+        <item>Marciszów</item>
+        <item>Margonin</item>
+        <item>Marianowo</item>
+        <item>Marklowice</item>
+        <item>Markowa</item>
+        <item>Markusy</item>
+        <item>Maszewo</item>
+        <item>Masłowice</item>
+        <item>Mała Wieś</item>
+        <item>Małdyty</item>
+        <item>Małogoszcz</item>
+        <item>Małomice</item>
+        <item>Mały Płock</item>
+        <item>Medyka</item>
+        <item>Miasteczko Krajeńskie</item>
+        <item>Miastko</item>
+        <item>Miastkowo</item>
+        <item>Miastków Kościelny</item>
+        <item>Michałowice</item>
+        <item>Michałowo</item>
+        <item>Michałów</item>
+        <item>Michów</item>
+        <item>Miedzichowo</item>
+        <item>Miedźna</item>
+        <item>Miejsce Piastowe</item>
+        <item>Miejska Górka</item>
+        <item>Mielec</item>
+        <item>Mieleszyn</item>
+        <item>Mielno</item>
+        <item>Mieroszów</item>
+        <item>Mierzęcice</item>
+        <item>Mieszkowice</item>
+        <item>Mietków</item>
+        <item>Mieścisko</item>
+        <item>Mikołajki</item>
+        <item>Mikołajki Pomorskie</item>
+        <item>Mikołów</item>
+        <item>Milanów</item>
+        <item>Milejczyce</item>
+        <item>Milejewo</item>
+        <item>Milejów</item>
+        <item>Milicz</item>
+        <item>Milówka</item>
+        <item>Mircze</item>
+        <item>Mirosławiec</item>
+        <item>Mirsk</item>
+        <item>Miączyn</item>
+        <item>Międzybórz</item>
+        <item>Międzychód</item>
+        <item>Międzylesie</item>
+        <item>Międzyrzec Podlaski</item>
+        <item>Międzyrzecz</item>
+        <item>Miękinia</item>
+        <item>Miłakowo</item>
+        <item>Miłki</item>
+        <item>Miłkowice</item>
+        <item>Miłomłyn</item>
+        <item>Miłoradz</item>
+        <item>Miłosław</item>
+        <item>Mińsk Mazowiecki</item>
+        <item>Mochowo</item>
+        <item>Modliborzyce</item>
+        <item>Mogielnica</item>
+        <item>Mogilno</item>
+        <item>Mokobody</item>
+        <item>Mokrsko</item>
+        <item>Morawica</item>
+        <item>Mordy</item>
+        <item>Moryń</item>
+        <item>Morzeszczyn</item>
+        <item>Morąg</item>
+        <item>Mosina</item>
+        <item>Moskorzew</item>
+        <item>Moszczenica</item>
+        <item>Mońki</item>
+        <item>Mrocza</item>
+        <item>Mrozy</item>
+        <item>Mrągowo</item>
+        <item>Mstów</item>
+        <item>Mszana</item>
+        <item>Mszana Dolna</item>
+        <item>Mucharz</item>
+        <item>Murowana Goślina</item>
+        <item>Murów</item>
+        <item>Mycielin</item>
+        <item>Mykanów</item>
+        <item>Myszków</item>
+        <item>Mysłakowice</item>
+        <item>Myślibórz</item>
+        <item>Męcinka</item>
+        <item>Młodzieszyn</item>
+        <item>Młynary</item>
+        <item>Mściwojów</item>
+        <item>Nadarzyn</item>
+        <item>Nagłowice</item>
+        <item>Nakło nad Notecią</item>
+        <item>Namysłów</item>
+        <item>Narol</item>
+        <item>Naruszewo</item>
+        <item>Nasielsk</item>
+        <item>Nawojowa</item>
+        <item>Nekla</item>
+        <item>Nidzica</item>
+        <item>Nieborów</item>
+        <item>Niebylec</item>
+        <item>Niechanowo</item>
+        <item>Niechlów</item>
+        <item>Niedźwiada</item>
+        <item>Niegosławice</item>
+        <item>Nielisz</item>
+        <item>Niemce</item>
+        <item>Niemcza</item>
+        <item>Niemodlin</item>
+        <item>Nieporęt</item>
+        <item>Niepołomice</item>
+        <item>Nieszawa</item>
+        <item>Nowa Brzeźnica</item>
+        <item>Nowa Dęba</item>
+        <item>Nowa Karczma</item>
+        <item>Nowa Ruda</item>
+        <item>Nowa Sarzyna</item>
+        <item>Nowa Sucha</item>
+        <item>Nowa Sól</item>
+        <item>Nowa Wieś Lęborska</item>
+        <item>Nowa Wieś Wielka</item>
+        <item>Nowe</item>
+        <item>Nowe Brzesko</item>
+        <item>Nowe Miasteczko</item>
+        <item>Nowe Miasto Lubawskie</item>
+        <item>Nowe Miasto nad Pilicą</item>
+        <item>Nowe Miasto nad Wartą</item>
+        <item>Nowe Ostrowy</item>
+        <item>Nowe Skalmierzyce</item>
+        <item>Nowinka</item>
+        <item>Nowogard</item>
+        <item>Nowogrodziec</item>
+        <item>Nowogród Bobrzański</item>
+        <item>Nowogródek Pomorski</item>
+        <item>Nowosolna</item>
+        <item>Nowy Dwór</item>
+        <item>Nowy Dwór Gdański</item>
+        <item>Nowy Kawęczyn</item>
+        <item>Nowy Staw</item>
+        <item>Nowy Tomyśl</item>
+        <item>Nowy Żmigród</item>
+        <item>Nozdrzec</item>
+        <item>Nurzec Stacja</item>
+        <item>Nysa</item>
+        <item>Nędza</item>
+        <item>Oborniki</item>
+        <item>Oborniki Śląskie</item>
+        <item>Obrazów</item>
+        <item>Obrzycko</item>
+        <item>Obsza</item>
+        <item>Odolanów</item>
+        <item>Ogrodzieniec</item>
+        <item>Okonek</item>
+        <item>Oksa</item>
+        <item>Olecko</item>
+        <item>Olesno</item>
+        <item>Oleszyce</item>
+        <item>Oleśnica</item>
+        <item>Oleśnica (arch)</item>
+        <item>Olszanica</item>
+        <item>Olszanka</item>
+        <item>Olsztynek</item>
+        <item>Olszyna</item>
+        <item>Olszówka</item>
+        <item>Opalenica</item>
+        <item>Opatowiec</item>
+        <item>Opatów</item>
+        <item>Opatówek</item>
+        <item>Opinogóra Górna</item>
+        <item>Opoczno</item>
+        <item>Opole Lubelskie</item>
+        <item>Orchowo</item>
+        <item>Orla</item>
+        <item>Orneta</item>
+        <item>Orońsko</item>
+        <item>Orzysz</item>
+        <item>Orły</item>
+        <item>Osie</item>
+        <item>Osieczna</item>
+        <item>Osiek</item>
+        <item>Osiek Mały</item>
+        <item>Osielsko</item>
+        <item>Osina</item>
+        <item>Osięciny</item>
+        <item>Ostaszewo</item>
+        <item>Ostroróg</item>
+        <item>Ostrowite</item>
+        <item>Ostrzeszów</item>
+        <item>Ostróda</item>
+        <item>Ostrów</item>
+        <item>Ostrów Mazowiecka</item>
+        <item>Ostrów Wielkopolski</item>
+        <item>Otmuchów</item>
+        <item>Otyń</item>
+        <item>Ozimek</item>
+        <item>Ozorków</item>
+        <item>Oława</item>
+        <item>Ośno Lubuskie</item>
+        <item>Oświęcim</item>
+        <item>Ożarów</item>
+        <item>Ożarów Mazowiecki</item>
+        <item>Pacanów</item>
+        <item>Pacyna</item>
+        <item>Paczków</item>
+        <item>Padew Narodowa</item>
+        <item>Pakosław</item>
+        <item>Pakosławice</item>
+        <item>Pakość</item>
+        <item>Papowo Biskupie</item>
+        <item>Parchowo</item>
+        <item>Parczew</item>
+        <item>Parzęczew</item>
+        <item>Pasym</item>
+        <item>Paszowice</item>
+        <item>Pasłęk</item>
+        <item>Pawonków</item>
+        <item>Pawłowice</item>
+        <item>Pawłowiczki</item>
+        <item>Pawłów</item>
+        <item>Pelplin</item>
+        <item>Perzów</item>
+        <item>Pełczyce</item>
+        <item>Piaseczno</item>
+        <item>Piaski</item>
+        <item>Piecki</item>
+        <item>Piekoszów</item>
+        <item>Pielgrzymka</item>
+        <item>Pieniężno</item>
+        <item>Pierzchnica</item>
+        <item>Pieszyce</item>
+        <item>Pietrowice Wielkie</item>
+        <item>Pieńsk</item>
+        <item>Pilchowice</item>
+        <item>Pilica</item>
+        <item>Pilzno</item>
+        <item>Pionki</item>
+        <item>Piotrków Kujawski</item>
+        <item>Pisz</item>
+        <item>Piszczac</item>
+        <item>Piątek</item>
+        <item>Piątnica</item>
+        <item>Piła</item>
+        <item>Piława Górna</item>
+        <item>Pińczów</item>
+        <item>Platerów</item>
+        <item>Platerówka</item>
+        <item>Pleszew</item>
+        <item>Pleśna</item>
+        <item>Pniewy</item>
+        <item>Pobiedziska</item>
+        <item>Poczesna</item>
+        <item>Poddębice</item>
+        <item>Podedwórze</item>
+        <item>Podgórzyn</item>
+        <item>Pogorzela</item>
+        <item>Pokrzywnica</item>
+        <item>Pokój</item>
+        <item>Polanica-Zdrój</item>
+        <item>Polanka Wielka</item>
+        <item>Polanów</item>
+        <item>Police</item>
+        <item>Policzna</item>
+        <item>Polkowice</item>
+        <item>Polska Cerekiew</item>
+        <item>Pomiechówek</item>
+        <item>Poniatowa</item>
+        <item>Poniec</item>
+        <item>Popielów</item>
+        <item>Porąbka</item>
+        <item>Poręba</item>
+        <item>Postomino</item>
+        <item>Potok Wielki</item>
+        <item>Potworów</item>
+        <item>Potęgowo</item>
+        <item>Powidz</item>
+        <item>Pozezdrze</item>
+        <item>Połajewo</item>
+        <item>Połaniec</item>
+        <item>Połczyn-Zdrój</item>
+        <item>Poświętne</item>
+        <item>Prabuty</item>
+        <item>Praga-Północ</item>
+        <item>Praszka</item>
+        <item>Prochowice</item>
+        <item>Promna</item>
+        <item>Prostki</item>
+        <item>Proszowice</item>
+        <item>Prudnik</item>
+        <item>Prusice</item>
+        <item>Pruszcz</item>
+        <item>Pruszcz Gdański</item>
+        <item>Pruszków</item>
+        <item>Przechlewo</item>
+        <item>Przeciszów</item>
+        <item>Przecław</item>
+        <item>Przedbórz</item>
+        <item>Przedecz</item>
+        <item>Przelewice</item>
+        <item>Przemków</item>
+        <item>Przemyśl</item>
+        <item>Przemęt</item>
+        <item>Przerośl</item>
+        <item>Przeworno</item>
+        <item>Przewóz</item>
+        <item>Przodkowo</item>
+        <item>Przybiernów</item>
+        <item>Przygodzice</item>
+        <item>Przyrów</item>
+        <item>Przytoczna</item>
+        <item>Przytyk</item>
+        <item>Przywidz</item>
+        <item>Prószków</item>
+        <item>Psary</item>
+        <item>Pszczew</item>
+        <item>Pszczyna</item>
+        <item>Pszczółki</item>
+        <item>Pszów</item>
+        <item>Puchaczów</item>
+        <item>Puck</item>
+        <item>Purda</item>
+        <item>Puławy</item>
+        <item>Pułtusk</item>
+        <item>Puńsk</item>
+        <item>Pyrzyce</item>
+        <item>Pyskowice</item>
+        <item>Pyzdry</item>
+        <item>Pęcław</item>
+        <item>Pępowo</item>
+        <item>Płaska</item>
+        <item>Płoniawy-Bramura</item>
+        <item>Płoskinia</item>
+        <item>Płoty</item>
+        <item>Płońsk</item>
+        <item>Płośnica</item>
+        <item>Płużnica</item>
+        <item>Raba Wyżna</item>
+        <item>Rachanie</item>
+        <item>Racibórz</item>
+        <item>Raciechowice</item>
+        <item>Raciąż</item>
+        <item>Raczki</item>
+        <item>Radków</item>
+        <item>Radomin</item>
+        <item>Radomsko</item>
+        <item>Radomyśl Wielki</item>
+        <item>Radowo Małe</item>
+        <item>Radwanice</item>
+        <item>Radymno</item>
+        <item>Radzanów</item>
+        <item>Radziechowy-Wieprz</item>
+        <item>Radziejów</item>
+        <item>Radziemice</item>
+        <item>Radzionków</item>
+        <item>Radziłów</item>
+        <item>Radzyń Chełmiński</item>
+        <item>Radłów</item>
+        <item>Rajcza</item>
+        <item>Rajgród</item>
+        <item>Rakoniewice</item>
+        <item>Rakszawa</item>
+        <item>Raniżów</item>
+        <item>Raszków</item>
+        <item>Rawa Mazowiecka</item>
+        <item>Rawicz</item>
+        <item>Recz</item>
+        <item>Reda</item>
+        <item>Regimin</item>
+        <item>Regnów</item>
+        <item>Rejowiec</item>
+        <item>Rejowiec Fabryczny</item>
+        <item>Resko</item>
+        <item>Reszel</item>
+        <item>Rewal</item>
+        <item>Reńska Wieś</item>
+        <item>Rogowo</item>
+        <item>Rogoźno</item>
+        <item>Rogów</item>
+        <item>Rogóźno</item>
+        <item>Rojewo</item>
+        <item>Rokietnica</item>
+        <item>Rokitno</item>
+        <item>Ropczyce</item>
+        <item>Rozdrażew</item>
+        <item>Rozprza</item>
+        <item>Roźwienica</item>
+        <item>Ruciane-Nida</item>
+        <item>Ruda Maleniecka</item>
+        <item>Ruda-Huta</item>
+        <item>Rudka</item>
+        <item>Rudna</item>
+        <item>Rudnik</item>
+        <item>Rudziniec</item>
+        <item>Ruja</item>
+        <item>Rutka-Tartak</item>
+        <item>Rutki</item>
+        <item>Rybno</item>
+        <item>Rychliki</item>
+        <item>Rychtal</item>
+        <item>Ryczywół</item>
+        <item>Rydułtowy</item>
+        <item>Rydzyna</item>
+        <item>Ryjewo</item>
+        <item>Ryki</item>
+        <item>Rymanów</item>
+        <item>Rymań</item>
+        <item>Ryn</item>
+        <item>Rypin</item>
+        <item>Rytro</item>
+        <item>Rytwiany</item>
+        <item>Ryńsk</item>
+        <item>Rzeczenica</item>
+        <item>Rzekuń</item>
+        <item>Rzepin</item>
+        <item>Rzgów</item>
+        <item>Rząśnia</item>
+        <item>Rząśnik</item>
+        <item>Rąbino</item>
+        <item>Ręczno</item>
+        <item>Rędziny</item>
+        <item>Sabnie</item>
+        <item>Sadki</item>
+        <item>Sadkowice</item>
+        <item>Sadowne</item>
+        <item>Samborzec</item>
+        <item>Sanniki</item>
+        <item>Sanok</item>
+        <item>Santok</item>
+        <item>Sarnaki</item>
+        <item>Sawin</item>
+        <item>Secemin</item>
+        <item>Sejny</item>
+        <item>Serokomla</item>
+        <item>Sianów</item>
+        <item>Sicienko</item>
+        <item>Sidra</item>
+        <item>Siechnice</item>
+        <item>Sieciechów</item>
+        <item>Siedlce</item>
+        <item>Siedlec</item>
+        <item>Siedlisko</item>
+        <item>Siedliszcze</item>
+        <item>Siekierczyn</item>
+        <item>Siemień</item>
+        <item>Siemiątkowo</item>
+        <item>Siemyśl</item>
+        <item>Sieniawa</item>
+        <item>Siennica Różana</item>
+        <item>Sienno</item>
+        <item>Sieradz</item>
+        <item>Sierakowice</item>
+        <item>Sieraków</item>
+        <item>Sieroszewice</item>
+        <item>Sierpc</item>
+        <item>Siewierz</item>
+        <item>Sitno</item>
+        <item>Skalbmierz</item>
+        <item>Skarbimierz</item>
+        <item>Skarszewy</item>
+        <item>Skaryszew</item>
+        <item>Skawina</item>
+        <item>Skierbieszów</item>
+        <item>Skoczów</item>
+        <item>Skoki</item>
+        <item>Skoroszyce</item>
+        <item>Skrwilno</item>
+        <item>Skrzyszów</item>
+        <item>Skulsk</item>
+        <item>Skwierzyna</item>
+        <item>Skórcz</item>
+        <item>Skąpe</item>
+        <item>Skępe</item>
+        <item>Smołdzino</item>
+        <item>Smętowo Graniczne</item>
+        <item>Sobków</item>
+        <item>Sobolew</item>
+        <item>Sobótka</item>
+        <item>Sochaczew</item>
+        <item>Sokołów Małopolski</item>
+        <item>Sokołów Podlaski</item>
+        <item>Sokółka</item>
+        <item>Solina</item>
+        <item>Somonino</item>
+        <item>Sompolno</item>
+        <item>Sorkwity</item>
+        <item>Sosnowica</item>
+        <item>Sońsk</item>
+        <item>Sośnicowice</item>
+        <item>Sośnie</item>
+        <item>Sośno</item>
+        <item>Spiczyn</item>
+        <item>Spytkowice</item>
+        <item>Srokowo</item>
+        <item>Stalowa Wola</item>
+        <item>Stanin</item>
+        <item>Stanisławów</item>
+        <item>Stara Biała</item>
+        <item>Stara Błotnica</item>
+        <item>Stara Dąbrowa</item>
+        <item>Stara Kamienica</item>
+        <item>Stara Kiszewa</item>
+        <item>Stara Kornica</item>
+        <item>Stare Babice</item>
+        <item>Stare Bogaczowice</item>
+        <item>Stare Czarnowo</item>
+        <item>Stare Juchy</item>
+        <item>Stare Kurowo</item>
+        <item>Stare Miasto</item>
+        <item>Stare Pole</item>
+        <item>Stargard</item>
+        <item>Starogard Gdański</item>
+        <item>Staroźreby</item>
+        <item>Stary Brus</item>
+        <item>Stary Dzierzgoń</item>
+        <item>Stary Dzików</item>
+        <item>Stary Lubotyń</item>
+        <item>Stary Sącz</item>
+        <item>Stary Targ</item>
+        <item>Staszów</item>
+        <item>Stawiguda</item>
+        <item>Stawiski</item>
+        <item>Stawiszyn</item>
+        <item>Stegna</item>
+        <item>Stepnica</item>
+        <item>Stepnica (arch)</item>
+        <item>Sterdyń</item>
+        <item>Stoczek Łukowski</item>
+        <item>Stolno</item>
+        <item>Stopnica</item>
+        <item>Stoszowice</item>
+        <item>Strachówka</item>
+        <item>Stronie Śląskie</item>
+        <item>Strumień</item>
+        <item>Stryków</item>
+        <item>Stryszawa</item>
+        <item>Stryszów</item>
+        <item>Strzałkowo</item>
+        <item>Strzegom</item>
+        <item>Strzelce</item>
+        <item>Strzelce Krajeńskie</item>
+        <item>Strzelce Opolskie</item>
+        <item>Strzelce Wielkie</item>
+        <item>Strzeleczki</item>
+        <item>Strzelin</item>
+        <item>Strzelno</item>
+        <item>Strzyżów</item>
+        <item>Stubno</item>
+        <item>Studzienice</item>
+        <item>Stupsk</item>
+        <item>Stęszew</item>
+        <item>Stężyca</item>
+        <item>Subkowy</item>
+        <item>Sucha Beskidzka</item>
+        <item>Suchań</item>
+        <item>Suchożebry</item>
+        <item>Suchy Dąb</item>
+        <item>Suchy Las</item>
+        <item>Sulechów</item>
+        <item>Sulików</item>
+        <item>Sulmierzyce</item>
+        <item>Sulęcin</item>
+        <item>Sulęczyno</item>
+        <item>Supraśl</item>
+        <item>Suraż</item>
+        <item>Susz</item>
+        <item>Suszec</item>
+        <item>Suwałki</item>
+        <item>Sułów</item>
+        <item>Swarzędz</item>
+        <item>Syców</item>
+        <item>Sypniewo</item>
+        <item>Szadek</item>
+        <item>Szaflary</item>
+        <item>Szamocin</item>
+        <item>Szamotuły</item>
+        <item>Szczaniec</item>
+        <item>Szczawin Kościelny</item>
+        <item>Szczawno-Zdrój</item>
+        <item>Szczebrzeszyn</item>
+        <item>Szczecinek</item>
+        <item>Szczekociny</item>
+        <item>Szczerców</item>
+        <item>Szczucin</item>
+        <item>Szczurowa</item>
+        <item>Szczutowo</item>
+        <item>Szczyrk</item>
+        <item>Szczytna</item>
+        <item>Szczytniki</item>
+        <item>Szczytno</item>
+        <item>Szelków</item>
+        <item>Szemud</item>
+        <item>Szepietowo</item>
+        <item>Szepietowo (arch)</item>
+        <item>Szklarska Poręba</item>
+        <item>Szlichtyngowa</item>
+        <item>Szprotawa</item>
+        <item>Szreńsk</item>
+        <item>Sztum</item>
+        <item>Sztutowo</item>
+        <item>Szubin</item>
+        <item>Szudziałowo</item>
+        <item>Szumowo</item>
+        <item>Szydłowo</item>
+        <item>Szydłów</item>
+        <item>Szypliszki</item>
+        <item>Sędziszów</item>
+        <item>Sędziszów Małopolski</item>
+        <item>Sękowa</item>
+        <item>Sępopol</item>
+        <item>Sępólno Krajeńskie</item>
+        <item>Sława</item>
+        <item>Sławatycze</item>
+        <item>Sławno</item>
+        <item>Sławoborze</item>
+        <item>Słomniki</item>
+        <item>Słońsk</item>
+        <item>Słubice</item>
+        <item>Słupca</item>
+        <item>Słupia (Jędrzejowska)</item>
+        <item>Słupno</item>
+        <item>Słupsk</item>
+        <item>Tarczyn</item>
+        <item>Targówek</item>
+        <item>Tarnawatka</item>
+        <item>Tarnogród</item>
+        <item>Tarnowo Podgórne</item>
+        <item>Tarnowskie Góry</item>
+        <item>Tarnów</item>
+        <item>Tarnówka</item>
+        <item>Tczew</item>
+        <item>Telatyn</item>
+        <item>Teresin</item>
+        <item>Terespol</item>
+        <item>Tereszpol</item>
+        <item>Tolkmicko</item>
+        <item>Tomaszów Lubelski</item>
+        <item>Tomice</item>
+        <item>Topólka</item>
+        <item>Torzym</item>
+        <item>Toszek</item>
+        <item>Trojanów</item>
+        <item>Tryńcza</item>
+        <item>Trzcianka</item>
+        <item>Trzcianne</item>
+        <item>Trzciel</item>
+        <item>Trzcinica</item>
+        <item>Trzcińsko-Zdrój</item>
+        <item>Trzebiatów</item>
+        <item>Trzebiechów</item>
+        <item>Trzebiel</item>
+        <item>Trzebielino</item>
+        <item>Trzebnica</item>
+        <item>Trzebownisko</item>
+        <item>Trzemeszno</item>
+        <item>Trzeszczany</item>
+        <item>Trzyciąż</item>
+        <item>Trzydnik Duży</item>
+        <item>Trąbki Wielkie</item>
+        <item>Tuchola</item>
+        <item>Tuchomie</item>
+        <item>Tuchów</item>
+        <item>Tuczno</item>
+        <item>Tuliszków</item>
+        <item>Tuplice</item>
+        <item>Turawa</item>
+        <item>Turek</item>
+        <item>Turośń Kościelna</item>
+        <item>Tuszyn</item>
+        <item>Tułowice</item>
+        <item>Twardogóra</item>
+        <item>Tworóg</item>
+        <item>Tychowo</item>
+        <item>Tychowo (arch)</item>
+        <item>Tyczyn</item>
+        <item>Tykocin</item>
+        <item>Uchanie</item>
+        <item>Udanin</item>
+        <item>Ujazd</item>
+        <item>Ujsoły</item>
+        <item>Ujście</item>
+        <item>Ulhówek</item>
+        <item>Uniejów</item>
+        <item>Unisław</item>
+        <item>Ursynów</item>
+        <item>Urszulin</item>
+        <item>Ustka</item>
+        <item>Ustronie Morskie</item>
+        <item>Ustroń</item>
+        <item>Ustrzyki Dolne</item>
+        <item>Ułęż</item>
+        <item>Uście Gorlickie</item>
+        <item>Uścimów</item>
+        <item>Wadowice</item>
+        <item>Wadowice Górne</item>
+        <item>Waganiec</item>
+        <item>Walce</item>
+        <item>Walim</item>
+        <item>Wapno</item>
+        <item>Warka</item>
+        <item>Warlubie</item>
+        <item>Warnice</item>
+        <item>Warta</item>
+        <item>Warta Bolesławiecka</item>
+        <item>Wasilków</item>
+        <item>Wałcz</item>
+        <item>Waśniów</item>
+        <item>Wejherowo</item>
+        <item>Werbkowice</item>
+        <item>Wicko</item>
+        <item>Widawa</item>
+        <item>Widuchowa</item>
+        <item>Wieczfnia Kościelna</item>
+        <item>Wielbark</item>
+        <item>Wieleń</item>
+        <item>Wielgie</item>
+        <item>Wielgomłyny</item>
+        <item>Wielichowo</item>
+        <item>Wieliczki</item>
+        <item>Wieliszew</item>
+        <item>Wielka Nieszawka</item>
+        <item>Wielka Wieś</item>
+        <item>Wielkie Oczy</item>
+        <item>Wielopole Skrzyńskie</item>
+        <item>Wielowieś</item>
+        <item>Wieluń</item>
+        <item>Wieniawa</item>
+        <item>Wieprz</item>
+        <item>Wieruszów</item>
+        <item>Wierzbica</item>
+        <item>Wierzbinek</item>
+        <item>Wierzchowo</item>
+        <item>Wijewo</item>
+        <item>Wilamowice</item>
+        <item>Wilczyce</item>
+        <item>Wilczyn</item>
+        <item>Wilczęta</item>
+        <item>Wilkowice</item>
+        <item>Wilków</item>
+        <item>Wisznia Mała</item>
+        <item>Wisła</item>
+        <item>Witkowo</item>
+        <item>Witnica</item>
+        <item>Witonia</item>
+        <item>Wizna</item>
+        <item>Wiązowna</item>
+        <item>Wiązownica</item>
+        <item>Wiązów</item>
+        <item>Więcbork</item>
+        <item>Wińsko</item>
+        <item>Wiślica</item>
+        <item>Wiśniew</item>
+        <item>Wiśniewo</item>
+        <item>Wiśniowa</item>
+        <item>Wiżajny</item>
+        <item>Wleń</item>
+        <item>Wodynie</item>
+        <item>Wodzierady</item>
+        <item>Wodzisław</item>
+        <item>Wodzisław Śląski</item>
+        <item>Wohyń</item>
+        <item>Wojciechowice</item>
+        <item>Wojciechów</item>
+        <item>Wojcieszków</item>
+        <item>Wojcieszów</item>
+        <item>Wola</item>
+        <item>Wola Krzysztoporska</item>
+        <item>Wola Mysłowska</item>
+        <item>Wola Uhruska</item>
+        <item>Wolbrom</item>
+        <item>Wolbórz</item>
+        <item>Wolbórz (arch)</item>
+        <item>Wolin</item>
+        <item>Wolsztyn</item>
+        <item>Wołczyn</item>
+        <item>Wołów</item>
+        <item>Woźniki</item>
+        <item>Wrocław-Fabryczna (arch)</item>
+        <item>Wrocław-Krzyki (arch)</item>
+        <item>Wronki</item>
+        <item>Września</item>
+        <item>Wróblew</item>
+        <item>Wschowa</item>
+        <item>Wydminy</item>
+        <item>Wymiarki</item>
+        <item>Wyry</item>
+        <item>Wyryki</item>
+        <item>Wyrzysk</item>
+        <item>Wysoka</item>
+        <item>Wyszki</item>
+        <item>Wyszogród</item>
+        <item>Wyśmierzyce</item>
+        <item>Wąbrzeźno</item>
+        <item>Wądroże Wielkie</item>
+        <item>Wągrowiec</item>
+        <item>Wąpielsk</item>
+        <item>Wąsewo</item>
+        <item>Wąsosz</item>
+        <item>Węgierska Górka</item>
+        <item>Węgliniec</item>
+        <item>Węgorzewo</item>
+        <item>Węgorzyno</item>
+        <item>Węgrów</item>
+        <item>Władysławowo</item>
+        <item>Władysławów</item>
+        <item>Włocławek</item>
+        <item>Włodawa</item>
+        <item>Włodowice</item>
+        <item>Włoszakowice</item>
+        <item>Włoszczowa</item>
+        <item>Zabierzów</item>
+        <item>Zabrodzie</item>
+        <item>Zabór</item>
+        <item>Zabłudów</item>
+        <item>Zadzim</item>
+        <item>Zagrodno</item>
+        <item>Zagórz</item>
+        <item>Zagórów</item>
+        <item>Zaklików</item>
+        <item>Zakopane</item>
+        <item>Zakroczym</item>
+        <item>Zakrzewo</item>
+        <item>Zalesie</item>
+        <item>Zaleszany</item>
+        <item>Zalewo</item>
+        <item>Zambrów</item>
+        <item>Zamość</item>
+        <item>Zaniemyśl</item>
+        <item>Zapolice</item>
+        <item>Zarszyn</item>
+        <item>Zator</item>
+        <item>Zatory</item>
+        <item>Zawady</item>
+        <item>Zawadzkie</item>
+        <item>Zawichost</item>
+        <item>Zawidz</item>
+        <item>Zawidów</item>
+        <item>Zawiercie</item>
+        <item>Zawoja</item>
+        <item>Zawonia</item>
+        <item>Załuski</item>
+        <item>Zbiczno</item>
+        <item>Zblewo</item>
+        <item>Zbrosławice</item>
+        <item>Zbójno</item>
+        <item>Zbąszynek</item>
+        <item>Zbąszyń</item>
+        <item>Zduny</item>
+        <item>Zdzieszowice</item>
+        <item>Zebrzydowice</item>
+        <item>Zelów</item>
+        <item>Zembrzyce</item>
+        <item>Zgorzelec</item>
+        <item>Zielonki</item>
+        <item>Ziębice</item>
+        <item>Zwierzyn</item>
+        <item>Zwierzyniec</item>
+        <item>Ząbkowice Śląskie</item>
+        <item>Zębowice</item>
+        <item>Zławieś Wielka</item>
+        <item>Złocieniec</item>
+        <item>Złota</item>
+        <item>Złotniki Kujawskie</item>
+        <item>Złotoryja</item>
+        <item>Złoty Stok</item>
+        <item>Złotów</item>
+        <item>Ćmielów</item>
+        <item>Łabiszyn</item>
+        <item>Łabowa</item>
+        <item>Łabunie</item>
+        <item>Łagiewniki</item>
+        <item>Łagów</item>
+        <item>Łambinowice</item>
+        <item>Łanięta</item>
+        <item>Łasin</item>
+        <item>Łask</item>
+        <item>Łaskarzew</item>
+        <item>Łaszczów</item>
+        <item>Łaszczów (arch)</item>
+        <item>Łaziska</item>
+        <item>Łaziska Górne</item>
+        <item>Łazy</item>
+        <item>Łańcut</item>
+        <item>Łeba</item>
+        <item>Łobez</item>
+        <item>Łobżenica</item>
+        <item>Łochów</item>
+        <item>Łodygowice</item>
+        <item>Łomża</item>
+        <item>Łopiennik Górny</item>
+        <item>Łopuszno</item>
+        <item>Łosice</item>
+        <item>Łososina Dolna</item>
+        <item>Łubianka</item>
+        <item>Łubniany</item>
+        <item>Łubowo</item>
+        <item>Łukowa</item>
+        <item>Łukta</item>
+        <item>Łużna</item>
+        <item>Łysomice</item>
+        <item>Łyszkowice</item>
+        <item>Łódź-Polesie</item>
+        <item>Łódź-Widzew</item>
+        <item>Łąck</item>
+        <item>Łęczna</item>
+        <item>Łęczyce</item>
+        <item>Łęka Opatowska</item>
+        <item>Łękawica</item>
+        <item>Łęki Szlacheckie</item>
+        <item>Ścinawa</item>
+        <item>Ślemień</item>
+        <item>Ślesin</item>
+        <item>Śliwice</item>
+        <item>Śmigiel</item>
+        <item>Śrem</item>
+        <item>Środa Wielkopolska</item>
+        <item>Środa Śląska</item>
+        <item>Świdnica</item>
+        <item>Świdwin</item>
+        <item>Świebodzice</item>
+        <item>Świebodzin</item>
+        <item>Świecie</item>
+        <item>Świecie nad Osą</item>
+        <item>Świedziebnia</item>
+        <item>Świekatowo</item>
+        <item>Świeradów-Zdrój</item>
+        <item>Świercze</item>
+        <item>Świerczów</item>
+        <item>Świerklaniec</item>
+        <item>Świerzawa</item>
+        <item>Świerzno</item>
+        <item>Świeszyno</item>
+        <item>Świlcza</item>
+        <item>Świnice Warckie</item>
+        <item>Świnna</item>
+        <item>Świątki</item>
+        <item>Święciechowa</item>
+        <item>Świętajno</item>
+        <item>Żabia Wola</item>
+        <item>Żabno</item>
+        <item>Żagań</item>
+        <item>Żarnowiec</item>
+        <item>Żarnów</item>
+        <item>Żary</item>
+        <item>Żarów</item>
+        <item>Żelazków</item>
+        <item>Żelechlinek</item>
+        <item>Żelechów</item>
+        <item>Żerków</item>
+        <item>Żmigród</item>
+        <item>Żmudź</item>
+        <item>Żnin</item>
+        <item>Żołynia</item>
+        <item>Żukowice</item>
+        <item>Żukowo</item>
+        <item>Żurawica</item>
+        <item>Żuromin</item>
+        <item>Żychlin</item>
+        <item>Żyraków</item>
+        <item>Żytno</item>
+        <item>Żywiec</item>
+        <item>Żórawina</item>
+        <item>Żółkiewka</item>
+    </string-array>
+
+    <string-array name="powiat">
+        <item>Powiat</item>
+        <item>aleksandrowski</item>
+        <item>augustowski</item>
+        <item>bartoszycki</item>
+        <item>bełchatowski</item>
+        <item>bialski</item>
+        <item>białobrzeski</item>
+        <item>białogardzki</item>
+        <item>białostocki</item>
+        <item>bielski</item>
+        <item>bieruńsko-lędziński</item>
+        <item>bieszczadzki</item>
+        <item>biłgorajski</item>
+        <item>bocheński</item>
+        <item>bolesławiecki</item>
+        <item>braniewski</item>
+        <item>brodnicki</item>
+        <item>brzeski</item>
+        <item>brzeziński</item>
+        <item>brzozowski</item>
+        <item>buski</item>
+        <item>bydgoski</item>
+        <item>bytowski</item>
+        <item>będziński</item>
+        <item>chełmiński</item>
+        <item>chełmski</item>
+        <item>chodzieski</item>
+        <item>chojnicki</item>
+        <item>choszczeński</item>
+        <item>ciechanowski</item>
+        <item>cieszyński</item>
+        <item>czarnkowsko-trzcianecki</item>
+        <item>częstochowski</item>
+        <item>człuchowski</item>
+        <item>drawski</item>
+        <item>działdowski</item>
+        <item>dzierżoniowski</item>
+        <item>dąbrowski</item>
+        <item>dębicki</item>
+        <item>elbląski</item>
+        <item>ełcki</item>
+        <item>garwoliński</item>
+        <item>gdański</item>
+        <item>giżycki</item>
+        <item>gliwicki</item>
+        <item>gnieźnieński</item>
+        <item>goleniowski</item>
+        <item>golubsko-dobrzyński</item>
+        <item>gorlicki</item>
+        <item>gorzowski</item>
+        <item>gostyniński</item>
+        <item>gostyński</item>
+        <item>gołdapski</item>
+        <item>grajewski</item>
+        <item>grodziski</item>
+        <item>grudziądzki</item>
+        <item>gryficki</item>
+        <item>gryfiński</item>
+        <item>grójecki</item>
+        <item>górowski</item>
+        <item>głogowski</item>
+        <item>głubczycki</item>
+        <item>hajnowski</item>
+        <item>hrubieszowski</item>
+        <item>inowrocławski</item>
+        <item>iławski</item>
+        <item>janowski</item>
+        <item>jarociński</item>
+        <item>jarosławski</item>
+        <item>jasielski</item>
+        <item>jaworski</item>
+        <item>jeleniogórski</item>
+        <item>jędrzejowski</item>
+        <item>kaliski</item>
+        <item>kamiennogórski</item>
+        <item>kamieński</item>
+        <item>kartuski</item>
+        <item>kazimierski</item>
+        <item>kielecki</item>
+        <item>kluczborski</item>
+        <item>kolbuszowski</item>
+        <item>kolneński</item>
+        <item>kolski</item>
+        <item>konecki</item>
+        <item>koniński</item>
+        <item>koszaliński</item>
+        <item>kozienicki</item>
+        <item>kołobrzeski</item>
+        <item>kościański</item>
+        <item>kościerski</item>
+        <item>krakowski</item>
+        <item>krapkowicki</item>
+        <item>krasnostawski</item>
+        <item>kraśnicki</item>
+        <item>krotoszyński</item>
+        <item>krośnieński</item>
+        <item>kutnowski</item>
+        <item>kwidzyński</item>
+        <item>kędzierzyńsko-kozielski</item>
+        <item>kępiński</item>
+        <item>kętrzyński</item>
+        <item>kłobucki</item>
+        <item>kłodzki</item>
+        <item>legionowski</item>
+        <item>legnicki</item>
+        <item>leski</item>
+        <item>leszczyński</item>
+        <item>leżajski</item>
+        <item>lidzbarski</item>
+        <item>limanowski</item>
+        <item>lipnowski</item>
+        <item>lipski</item>
+        <item>lubaczowski</item>
+        <item>lubartowski</item>
+        <item>lubański</item>
+        <item>lubelski</item>
+        <item>lubiński</item>
+        <item>lubliniecki</item>
+        <item>lwówecki</item>
+        <item>lęborski</item>
+        <item>m. Białystok</item>
+        <item>m. Bielsko-Biała</item>
+        <item>m. Bydgoszcz</item>
+        <item>m. Bytom</item>
+        <item>m. Chorzów</item>
+        <item>m. Częstochowa</item>
+        <item>m. Elbląg</item>
+        <item>m. Gdańsk</item>
+        <item>m. Gdynia</item>
+        <item>m. Gliwice</item>
+        <item>m. Gorzów Wielkopolski</item>
+        <item>m. Grudziądz</item>
+        <item>m. Jastrzębie-Zdrój</item>
+        <item>m. Jelenia Góra</item>
+        <item>m. Kalisz</item>
+        <item>m. Konin</item>
+        <item>m. Koszalin</item>
+        <item>m. Kraków</item>
+        <item>m. Krosno</item>
+        <item>m. Legnica</item>
+        <item>m. Leszno</item>
+        <item>m. Lublin</item>
+        <item>m. Mysłowice</item>
+        <item>m. Nowy Sącz</item>
+        <item>m. Olsztyn</item>
+        <item>m. Opole</item>
+        <item>m. Ostrołęka</item>
+        <item>m. Piekary Śląskie</item>
+        <item>m. Poznań</item>
+        <item>m. Przemyśl</item>
+        <item>m. Płock</item>
+        <item>m. Radom</item>
+        <item>m. Ruda Śląska</item>
+        <item>m. Rybnik</item>
+        <item>m. Rzeszów</item>
+        <item>m. Siedlce</item>
+        <item>m. Siemianowice Śląskie</item>
+        <item>m. Sopot</item>
+        <item>m. Suwałki</item>
+        <item>m. Szczecin</item>
+        <item>m. Słupsk</item>
+        <item>m. Tarnów</item>
+        <item>m. Toruń</item>
+        <item>m. Tychy</item>
+        <item>m. Wałbrzych</item>
+        <item>m. Wrocław</item>
+        <item>m. Włocławek</item>
+        <item>m. Zabrze</item>
+        <item>m. Zamość</item>
+        <item>m. Zielona Góra</item>
+        <item>m. st. Warszawa</item>
+        <item>m. Łódź</item>
+        <item>m. Świnoujście</item>
+        <item>m. Żory</item>
+        <item>makowski</item>
+        <item>malborski</item>
+        <item>miechowski</item>
+        <item>mielecki</item>
+        <item>mikołowski</item>
+        <item>milicki</item>
+        <item>międzychodzki</item>
+        <item>międzyrzecki</item>
+        <item>miński</item>
+        <item>mogileński</item>
+        <item>moniecki</item>
+        <item>mrągowski</item>
+        <item>myszkowski</item>
+        <item>myślenicki</item>
+        <item>myśliborski</item>
+        <item>mławski</item>
+        <item>nakielski</item>
+        <item>namysłowski</item>
+        <item>nidzicki</item>
+        <item>niżański</item>
+        <item>nowodworski</item>
+        <item>nowomiejski</item>
+        <item>nowosolski</item>
+        <item>nowosądecki</item>
+        <item>nowotarski</item>
+        <item>nowotomyski</item>
+        <item>nyski</item>
+        <item>obornicki</item>
+        <item>olecki</item>
+        <item>oleski</item>
+        <item>oleśnicki</item>
+        <item>olkuski</item>
+        <item>olsztyński</item>
+        <item>opatowski</item>
+        <item>opoczyński</item>
+        <item>opolski</item>
+        <item>ostrowiecki</item>
+        <item>ostrowski</item>
+        <item>ostrołęcki</item>
+        <item>ostrzeszowski</item>
+        <item>ostródzki</item>
+        <item>otwocki</item>
+        <item>oławski</item>
+        <item>oświęcimski</item>
+        <item>pabianicki</item>
+        <item>pajęczański</item>
+        <item>parczewski</item>
+        <item>piaseczyński</item>
+        <item>pilski</item>
+        <item>piotrkowski</item>
+        <item>piski</item>
+        <item>pińczowski</item>
+        <item>pleszewski</item>
+        <item>poddębicki</item>
+        <item>policki</item>
+        <item>polkowicki</item>
+        <item>poznański</item>
+        <item>proszowicki</item>
+        <item>prudnicki</item>
+        <item>pruszkowski</item>
+        <item>przasnyski</item>
+        <item>przemyski</item>
+        <item>przeworski</item>
+        <item>przysuski</item>
+        <item>pszczyński</item>
+        <item>pucki</item>
+        <item>puławski</item>
+        <item>pułtuski</item>
+        <item>pyrzycki</item>
+        <item>płocki</item>
+        <item>płoński</item>
+        <item>raciborski</item>
+        <item>radomski</item>
+        <item>radomszczański</item>
+        <item>radziejowski</item>
+        <item>radzyński</item>
+        <item>rawicki</item>
+        <item>rawski</item>
+        <item>ropczycko-sędziszowski</item>
+        <item>rybnicki</item>
+        <item>rycki</item>
+        <item>rypiński</item>
+        <item>rzeszowski</item>
+        <item>sandomierski</item>
+        <item>sanocki</item>
+        <item>sejneński</item>
+        <item>siedlecki</item>
+        <item>siemiatycki</item>
+        <item>sieradzki</item>
+        <item>sierpecki</item>
+        <item>skierniewicki</item>
+        <item>sochaczewski</item>
+        <item>sokołowski</item>
+        <item>sokólski</item>
+        <item>stalowowolski</item>
+        <item>starachowicki</item>
+        <item>stargardzki</item>
+        <item>starogardzki</item>
+        <item>staszowski</item>
+        <item>strzelecki</item>
+        <item>strzelecko-drezdenecki</item>
+        <item>strzeliński</item>
+        <item>strzyżowski</item>
+        <item>sulęciński</item>
+        <item>suski</item>
+        <item>suwalski</item>
+        <item>szamotulski</item>
+        <item>szczecinecki</item>
+        <item>szczycieński</item>
+        <item>sztumski</item>
+        <item>szydłowiecki</item>
+        <item>sępoleński</item>
+        <item>sławieński</item>
+        <item>słubicki</item>
+        <item>słupecki</item>
+        <item>słupski</item>
+        <item>tarnobrzeski</item>
+        <item>tarnogórski</item>
+        <item>tarnowski</item>
+        <item>tatrzański</item>
+        <item>tczewski</item>
+        <item>tomaszowski</item>
+        <item>toruński</item>
+        <item>trzebnicki</item>
+        <item>tucholski</item>
+        <item>turecki</item>
+        <item>wadowicki</item>
+        <item>warszawski zachodni</item>
+        <item>wałbrzyski</item>
+        <item>wałecki</item>
+        <item>wejherowski</item>
+        <item>wielicki</item>
+        <item>wieluński</item>
+        <item>wieruszowski</item>
+        <item>wodzisławski</item>
+        <item>wolsztyński</item>
+        <item>wołomiński</item>
+        <item>wołowski</item>
+        <item>wrocławski</item>
+        <item>wrzesiński</item>
+        <item>wschowski</item>
+        <item>wysokomazowiecki</item>
+        <item>wyszkowski</item>
+        <item>wąbrzeski</item>
+        <item>wągrowiecki</item>
+        <item>węgorzewski</item>
+        <item>węgrowski</item>
+        <item>włocławski</item>
+        <item>włodawski</item>
+        <item>włoszczowski</item>
+        <item>zambrowski</item>
+        <item>zamojski</item>
+        <item>zawierciański</item>
+        <item>zduńskowolski</item>
+        <item>zgierski</item>
+        <item>zgorzelecki</item>
+        <item>zielonogórski</item>
+        <item>zwoleński</item>
+        <item>ząbkowicki</item>
+        <item>złotoryjski</item>
+        <item>złotowski</item>
+        <item>łaski</item>
+        <item>łańcucki</item>
+        <item>łobeski</item>
+        <item>łomżyński</item>
+        <item>łosicki</item>
+        <item>łowicki</item>
+        <item>łukowski</item>
+        <item>łódzki wschodni</item>
+        <item>łęczycki</item>
+        <item>łęczyński</item>
+        <item>średzki</item>
+        <item>śremski</item>
+        <item>świdnicki</item>
+        <item>świdwiński</item>
+        <item>świebodziński</item>
+        <item>świecki</item>
+        <item>żagański</item>
+        <item>żarski</item>
+        <item>żniński</item>
+        <item>żuromiński</item>
+        <item>żywiecki</item>
+    </string-array>
+</resources>
