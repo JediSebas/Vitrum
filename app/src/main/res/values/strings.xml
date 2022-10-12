@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">Vitrum</string>
+    <string name="title_activity_suggestion">Suggestions</string>
     <string name="logo" translatable="false">Logo</string>
     <string name="worker">worker</string>
     <string name="inhabitant">inhabitant</string>
@@ -26,6 +27,8 @@
     <string name="month">Month</string>
     <string name="year">Year</string>
     <string name="set_birthdate">Set birthdate</string>
+    <string name="registration">Registration…</string>
+    <string name="connection_error">Connection error</string>
 
     <string name="not_all_data">Not all data!</string>
     <string name="wrong_data">Wrong data!</string>
@@ -33,6 +36,11 @@
     <string name="db_url" translatable="false">jdbc:mysql://192.168.1.185/vitrum</string>
     <string name="db_username" translatable="false">user</string>
     <string name="db_password" translatable="false">user</string>
+
+    <string name="my_suggestions">My suggestions</string>
+    <string name="all_suggestions">Suggestions</string>
+
+    <string name="fab" translatable="false">Floating action button</string>
 
     <string-array name="days">
         <item>1</item>

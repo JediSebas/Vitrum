@@ -11,21 +11,21 @@ import android.widget.ImageView;
 
 import com.jedisebas.vitrum.R;
 
-public class ChoiceOneActivity extends AppCompatActivity {
+public class ChoiceTwoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choice_one);
+        setContentView(R.layout.activity_choice_two);
 
         final ImageView logoIv = findViewById(R.id.logoIv);
-        final Button loginBtn = findViewById(R.id.choiceLoginBtn);
-        final Button signUpBtn = findViewById(R.id.signUpBtn);
+        final Button gmina = findViewById(R.id.gminaBtn);
+        final Button powiat = findViewById(R.id.powiatBtn);
 
         logoIv.setImageResource(R.drawable.logo);
 
-        loginBtn.setOnClickListener(view -> startActivity(new Intent(this, ChoiceTwoActivity.class)));
-        signUpBtn.setOnClickListener(view -> startActivity(new Intent(this, SignUpActivity.class)));
+        gmina.setOnClickListener(view -> goToLogin("id_gmina"));
+        powiat.setOnClickListener(view -> goToLogin("id_powiat"));
 
         final ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -40,5 +40,11 @@ public class ChoiceOneActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void goToLogin(final String unit) {
+        LoginActivity.worker = false;
+        LoginActivity.unit = unit;
+        startActivity(new Intent(this, LoginActivity.class));
     }
 }

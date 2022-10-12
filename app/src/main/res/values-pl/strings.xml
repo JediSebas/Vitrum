@@ -1,4 +1,5 @@
 <resources>
+    <string name="title_activity_suggestion">Propozycje</string>
     <string name="worker">pracownik</string>
     <string name="inhabitant">mieszkaniec</string>
 
@@ -20,7 +21,12 @@
     <string name="month">Miesiąc</string>
     <string name="year">Rok</string>
     <string name="set_birthdate">Wybierz datę urodzenia</string>
+    <string name="registration">Rejestracja…</string>
+    <string name="connection_error">Błąd połączenia</string>
 
     <string name="not_all_data">Nie wszystkie dane!</string>
     <string name="wrong_data">Nieprawidłowe dane!</string>
+
+    <string name="my_suggestions">Moje propozycje</string>
+    <string name="all_suggestions">Propozycje</string>
 </resources>

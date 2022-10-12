@@ -35,12 +35,12 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
     private String birthdate;
     private int idGmina = 0;
     private int idPowiat = 0;
+    private boolean connectionError;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
 
         birthdateTv = findViewById(R.id.birthdateTv);
         final EditText nameEt = findViewById(R.id.nameEt);
@@ -98,6 +98,20 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
             } else {
                 JDBCSignUp jdbcSignUp = new JDBCSignUp(pesel, name, surname, birthdate, town, street, number, postCode, post, email, password, phone, idGmina, idPowiat);
                 jdbcSignUp.t.start();
+
+                try {
+                    jdbcSignUp.t.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                    Thread.currentThread().interrupt();
+                }
+
+                if (connectionError) {
+                    Toast.makeText(this, getString(R.string.connection_error), Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                Toast.makeText(this, getString(R.string.registration), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -157,6 +171,10 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
         }
     }
 
+    void setConnectionError() {
+        connectionError = true;
+    }
+
     private class JDBCSignUp implements Runnable {
 
         private final Thread t;
@@ -211,6 +229,7 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
                         " '" + approved + "', '" + idGmina + "', '" + idPowiat +"');";
                 stmt.executeUpdate(query);
             } catch (SQLException e) {
+                setConnectionError();
                 e.printStackTrace();
             }
         }

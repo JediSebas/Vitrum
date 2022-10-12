@@ -3,11 +3,13 @@ package com.jedisebas.vitrum.activity;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.jedisebas.vitrum.R;
@@ -23,16 +25,23 @@ import java.sql.Statement;
 public class LoginActivity extends AppCompatActivity {
 
     private String password2;
+    private boolean workerOfGmina;
+    private boolean connectionError;
+
     static boolean worker;
+    static String unit;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        final ImageView logoIv = findViewById(R.id.logoIv);
         final EditText loginEt = findViewById(R.id.loginEt);
         final EditText passwordEt = findViewById(R.id.passwordEt);
         final Button loginBtn = findViewById(R.id.loginBtn);
+
+        logoIv.setImageResource(R.drawable.logo);
 
         loginBtn.setOnClickListener(view -> {
             final String login = loginEt.getText().toString().trim();
@@ -51,7 +60,23 @@ public class LoginActivity extends AppCompatActivity {
                     Thread.currentThread().interrupt();
                 }
 
+                if (connectionError) {
+                    Toast.makeText(this, getString(R.string.connection_error), Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if (password.equals(password2)) {
+                    if (worker && workerOfGmina) {
+                        Log.println(Log.DEBUG, "log", "pracownik gminy");
+                        // zrob cos z gmina
+                    } else if (worker) {
+                        Log.println(Log.DEBUG, "log", "pracownik powiatu");
+                        // zrob cos z powiatem
+                    } else {
+                        Log.println(Log.DEBUG, "log", "mieszkaniec");
+                        startActivity(new Intent(this, SuggestionActivity.class));
+                        // cos dla zwyklego mieszkanca
+                    }
                     Log.println(Log.DEBUG, "log", "hasla sie zgadzajo");
                 } else {
                     Toast.makeText(this, getString(R.string.wrong_data), Toast.LENGTH_SHORT).show();
@@ -79,6 +104,14 @@ public class LoginActivity extends AppCompatActivity {
         this.password2 = password2;
     }
 
+    void setWorkerOfGmina(final boolean workerOfGmina) {
+        this.workerOfGmina = workerOfGmina;
+    }
+
+    void setConnectionError() {
+        connectionError = true;
+    }
+
     private class JDBCLogin implements Runnable {
 
         private final String login;
@@ -93,17 +126,22 @@ public class LoginActivity extends AppCompatActivity {
         public void run() {
             try (final Connection conn = DriverManager.getConnection(getString(R.string.db_url), getString(R.string.db_username), getString(R.string.db_password));
                  final Statement stmt = conn.createStatement()) {
-                @Language("RoomSql")final String query1 = "SELECT password FROM `worker` WHERE login = \"" + login + "\"";
+                Log.println(Log.ASSERT, "login", login);
+                @Language("RoomSql")final String query1 = "SELECT password, worker_of_gmina FROM `worker` WHERE login = \"" + login + "\"";
                 @Language("RoomSql")final String query2 = "SELECT password FROM `inhabitant` WHERE email = \"" + login + "\"";
                 final ResultSet rs;
                 if (worker) {
                     rs = stmt.executeQuery(query1);
+                    rs.next();
+                    setWorkerOfGmina(rs.getBoolean("worker_of_gmina"));
                 } else {
                     rs = stmt.executeQuery(query2);
+                    rs.next();
                 }
-                rs.next();
+
                 setPassword2(rs.getString("password"));
             } catch (SQLException e) {
+                setConnectionError();
                 e.printStackTrace();
             }
         }
