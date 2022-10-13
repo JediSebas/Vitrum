@@ -14,7 +14,7 @@ public class SectionsPagerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(final int position) {
-        if (position == 1) {
+        if (position == 0) {
             return new MySuggestionFragment();
         }
         return new AllSuggestionFragment();

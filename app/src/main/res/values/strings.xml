@@ -41,6 +41,7 @@
     <string name="all_suggestions">Suggestions</string>
 
     <string name="fab" translatable="false">Floating action button</string>
+    <string name="iv" translatable="false">Image of suggestion</string>
 
     <string-array name="days">
         <item>1</item>
