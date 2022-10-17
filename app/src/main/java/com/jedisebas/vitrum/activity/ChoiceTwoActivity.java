@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.jedisebas.vitrum.R;
+import com.jedisebas.vitrum.util.User;
 
 public class ChoiceTwoActivity extends AppCompatActivity {
 
@@ -43,8 +44,8 @@ public class ChoiceTwoActivity extends AppCompatActivity {
     }
 
     private void goToLogin(final String unit) {
-        LoginActivity.worker = false;
-        LoginActivity.unit = unit;
+        User.worker = false;
+        User.unit = unit;
         startActivity(new Intent(this, LoginActivity.class));
     }
 }

@@ -1,5 +1,6 @@
 package com.jedisebas.vitrum.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -10,16 +11,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.MenuItem;
-import android.view.View;
 
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.jedisebas.vitrum.R;
+import com.jedisebas.vitrum.activity.ui.main.CreateSuggestionActivity;
 import com.jedisebas.vitrum.activity.ui.main.SectionsPagerAdapter;
 import com.jedisebas.vitrum.databinding.ActivitySuggestionBinding;
 
 public class SuggestionActivity extends AppCompatActivity {
-
-    private boolean visible = false;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -42,25 +41,8 @@ public class SuggestionActivity extends AppCompatActivity {
         }).attach();
 
         final FloatingActionButton fab = binding.fab;
-        final FloatingActionButton saveFab = binding.saveFab;
-        final FloatingActionButton sendFab = binding.sendFab;
-        final FloatingActionButton cameraFab = binding.cameraFab;
-        final FloatingActionButton deleteFab = binding.deleteFab;
 
-        fab.setOnClickListener(view -> {
-            if (visible) {
-                saveFab.setVisibility(View.GONE);
-                sendFab.setVisibility(View.GONE);
-                cameraFab.setVisibility(View.GONE);
-                deleteFab.setVisibility(View.GONE);
-            } else {
-                saveFab.setVisibility(View.VISIBLE);
-                sendFab.setVisibility(View.VISIBLE);
-                cameraFab.setVisibility(View.VISIBLE);
-                deleteFab.setVisibility(View.VISIBLE);
-            }
-            visible = !visible;
-        });
+        fab.setOnClickListener(view -> startActivity(new Intent(this, CreateSuggestionActivity.class)));
 
         final ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {

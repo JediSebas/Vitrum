@@ -1,5 +1,7 @@
 package com.jedisebas.vitrum.activity;
 
+import static com.jedisebas.vitrum.util.User.worker;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.jedisebas.vitrum.R;
+import com.jedisebas.vitrum.util.User;
 
 import org.intellij.lang.annotations.Language;
 
@@ -27,9 +30,6 @@ public class LoginActivity extends AppCompatActivity {
     private String password2;
     private boolean workerOfGmina;
     private boolean connectionError;
-
-    static boolean worker;
-    static String unit;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -128,7 +128,7 @@ public class LoginActivity extends AppCompatActivity {
                  final Statement stmt = conn.createStatement()) {
                 Log.println(Log.ASSERT, "login", login);
                 @Language("RoomSql")final String query1 = "SELECT password, worker_of_gmina FROM `worker` WHERE login = \"" + login + "\"";
-                @Language("RoomSql")final String query2 = "SELECT password FROM `inhabitant` WHERE email = \"" + login + "\"";
+                @Language("RoomSql")final String query2 = "SELECT password, " + User.unit + ", id FROM `inhabitant` WHERE email = \"" + login + "\"";
                 final ResultSet rs;
                 if (worker) {
                     rs = stmt.executeQuery(query1);
@@ -137,6 +137,8 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     rs = stmt.executeQuery(query2);
                     rs.next();
+                    User.unitId = rs.getInt(User.unit);
+                    User.id = rs.getInt("id");
                 }
 
                 setPassword2(rs.getString("password"));

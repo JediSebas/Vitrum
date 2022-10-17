@@ -29,4 +29,8 @@
 
     <string name="my_suggestions">Moje propozycje</string>
     <string name="all_suggestions">Propozycje</string>
+
+    <string name="suggestion_title">Tytuł propozycji</string>
+    <string name="suggestion_image">Obraz propozycji</string>
+    <string name="suggestion_description">Opis propozycji</string>
 </resources>

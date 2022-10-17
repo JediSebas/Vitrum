@@ -43,6 +43,10 @@
     <string name="fab" translatable="false">Floating action button</string>
     <string name="iv" translatable="false">Image of suggestion</string>
 
+    <string name="suggestion_title">Suggestion title</string>
+    <string name="suggestion_image">Suggestion image</string>
+    <string name="suggestion_description">Suggestion description</string>
+
     <string-array name="days">
         <item>1</item>
         <item>2</item>

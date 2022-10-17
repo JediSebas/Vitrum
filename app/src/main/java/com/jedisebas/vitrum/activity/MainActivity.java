@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.jedisebas.vitrum.R;
+import com.jedisebas.vitrum.util.User;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         logoIv.setImageResource(R.drawable.logo);
 
         workerBtn.setOnClickListener(view -> {
-            LoginActivity.worker = true;
+            User.worker = true;
             startActivity(new Intent(this, LoginActivity.class));
         });
         inhabitant.setOnClickListener(view -> startActivity(new Intent(this, ChoiceOneActivity.class)));

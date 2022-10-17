@@ -1,5 +1,6 @@
 package com.jedisebas.vitrum.activity.ui.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -54,17 +55,9 @@ public class MySuggestionFragment extends Fragment {
                 voteDownTv.setText(newVoteDown);
             });
 
-            titleTv.setOnClickListener(view1 -> {
-
-            });
-
-            image.setOnClickListener(view1 -> {
-
-            });
-
-            commentsTv.setOnClickListener(view1 -> {
-
-            });
+//            titleTv.setOnClickListener(view1 -> startActivity(new Intent(getContext(), EntireSuggestionActivity.class)));
+//            image.setOnClickListener(view1 -> startActivity(new Intent(getContext(), EntireSuggestionActivity.class)));
+//            commentsTv.setOnClickListener(view1 -> startActivity(new Intent(getContext(), EntireSuggestionActivity.class)));
         });
 
         return root;
