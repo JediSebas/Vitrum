@@ -2,13 +2,15 @@ package com.jedisebas.vitrum.activity.ui.main;
 
 public class SuggestionItem {
 
+    private int id;
     private String title;
     // something for images
     private String voteUp;
     private String voteDown;
     private String comments;
 
-    SuggestionItem(final String title, final String voteUp, final String voteDown, final String comments) {
+    SuggestionItem(final int id, final String title, final String voteUp, final String voteDown, final String comments) {
+        this.id = id;
         this.title = title;
         this.voteUp = voteUp;
         this.voteDown = voteDown;
@@ -16,11 +18,19 @@ public class SuggestionItem {
     }
 
     SuggestionItem(final SuggestionItem item) {
-        this(item.getTitle(), item.getVoteUp(), item.getVoteDown(), item.getComments());
+        this(item.getId(), item.getTitle(), item.getVoteUp(), item.getVoteDown(), item.getComments());
     }
 
     SuggestionItem() {
-        this(null, null, null, null);
+        this(0, null, null, null, null);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
