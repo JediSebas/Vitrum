@@ -4,7 +4,7 @@
 <p>Julia Włodarczyk — Zespół Szkół Ekonomiczno-Administracyjnych im. Stanisława i Władysława Grabskich w Kole</p>
 
 ## Czym jest Vitrum?
-<p>WW wielu przedsiębiorstwach występują różne problemy, na które napotykają się pracownicy. Nieudogodnienia te, zgłaszane są do kadry kierowniczej, lecz mimo upływu czasu nie dochodzi do żadnych zmian. Frustracja pracowników wzrasta proporcjonalnie do ilości trudności, które nie są rozwiązywane. Taka sytuacja nazywana jest <i>problemem szklanego sufitu</i>. Mimo teoretycznej łączności i kontaktu z różnymi strukturami firmy, w praktyce nie istnieje.</p>
+<p>W wielu przedsiębiorstwach występują różne problemy, na które napotykają się pracownicy. Nieudogodnienia te, zgłaszane są do kadry kierowniczej, lecz mimo upływu czasu nie dochodzi do żadnych zmian. Frustracja pracowników wzrasta proporcjonalnie do ilości trudności, które nie są rozwiązywane. Taka sytuacja nazywana jest <i>problemem szklanego sufitu</i>. Mimo teoretycznej łączności i kontaktu z różnymi strukturami firmy, w praktyce nie istnieje.</p>
 <p>Podobnie dzieje się na szczeblach władzy samorządowej. Mieszkańcy borykają się z różnymi utrudnieniami, które mimo składania wniosków, próśb, skarg, zażaleń nie są eliminowane.</p>
 <p>Dlatego powstała ta aplikacja, która pomoże wszystkie te przeszkody pokonać.</p>
 
