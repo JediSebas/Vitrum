@@ -65,7 +65,7 @@ public class MySuggestionFragment extends Fragment {
             voteUpTv.setOnClickListener(view1 -> {
                 final int id = item.getId();
 
-                final JDBCCheckIsVote jdbcCheckIsVote = new JDBCCheckIsVote(id, 1);
+                final JDBCCheckIsVote jdbcCheckIsVote = new JDBCCheckIsVote(id);
                 jdbcCheckIsVote.t.start();
 
                 try {
@@ -127,7 +127,7 @@ public class MySuggestionFragment extends Fragment {
             voteDownTv.setOnClickListener(view1 -> {
                 final int id = item.getId();
 
-                final JDBCCheckIsVote jdbcCheckIsVote = new JDBCCheckIsVote(id, -1);
+                final JDBCCheckIsVote jdbcCheckIsVote = new JDBCCheckIsVote(id);
                 jdbcCheckIsVote.t.start();
 
                 try {
@@ -349,11 +349,9 @@ public class MySuggestionFragment extends Fragment {
 
         private final Thread t;
         private final int id;
-        private final int votedCode;
 
-        private JDBCCheckIsVote(final int id, final int votedCode) {
+        private JDBCCheckIsVote(final int id) {
             this.id = id;
-            this.votedCode = votedCode;
             t = new Thread(this);
         }
 
@@ -366,7 +364,7 @@ public class MySuggestionFragment extends Fragment {
 
                 if (!rs.next()) {
                     @Language("RoomSql") String query2 = "INSERT INTO `vote` (`id`, `id_inhabitant`, `id_suggestion`, `voted`) " +
-                            "VALUES (NULL, '" + User.id + "', '" + id +"', '" + votedCode + "');";
+                            "VALUES (NULL, '" + User.id + "', '" + id +"', '0');";
                     stmt.executeUpdate(query2);
                     setDoUpdate(false);
                 } else {
