@@ -9,8 +9,6 @@ q
 Aapp/src/main/java/com/jedisebas/vitrum/activity/MainActivity.java,6/0/60bd0e74313198168107ff449b2d1a9ad5ead967
 v
 Fapp/src/main/java/com/jedisebas/vitrum/activity/ChoiceTwoActivity.java,f/9/f945d315591530ac68da1573172328f7e9f6767e
-e
-5app/src/main/java/com/jedisebas/vitrum/util/User.java,6/5/65073f2fb307ca9b08f582efbb9e82f8c36b4e82
 Å
 Qapp/src/main/java/com/jedisebas/vitrum/activity/ui/main/SectionsPagerAdapter.java,2/9/29d64522142a8f3e0e911872f2b87c81323a23a9
 w

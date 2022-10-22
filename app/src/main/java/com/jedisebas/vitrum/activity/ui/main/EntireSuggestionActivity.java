@@ -5,17 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jedisebas.vitrum.R;
 import com.jedisebas.vitrum.activity.ui.main.comment.CommentAdapter;
 import com.jedisebas.vitrum.activity.ui.main.comment.CommentItem;
 import com.jedisebas.vitrum.util.BirthdatePicker;
+import com.jedisebas.vitrum.util.JDBCUtil;
 import com.jedisebas.vitrum.util.User;
 
 import org.intellij.lang.annotations.Language;
@@ -39,7 +43,9 @@ public class EntireSuggestionActivity extends AppCompatActivity {
     private String comments;
     private int status;
 
-    static int idSuggestion;
+    private boolean visible = false;
+
+    public static int idSuggestion;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -62,6 +68,9 @@ public class EntireSuggestionActivity extends AppCompatActivity {
         final CommentAdapter commentAdapter = new CommentAdapter(this, 0, itemList);
         commentsListView.setAdapter(commentAdapter);
 
+        final LinearLayout voteUpL = findViewById(R.id.voteUp);
+        final LinearLayout voteDownL = findViewById(R.id.voteDown);
+
         final TextView titleTv = findViewById(R.id.eSuggestionTitle);
         final TextView descriptionTv = findViewById(R.id.eSuggestionDescription);
         final TextView voteUpTv = findViewById(R.id.suggestionVoteUp);
@@ -69,6 +78,8 @@ public class EntireSuggestionActivity extends AppCompatActivity {
         final TextView commentTv = findViewById(R.id.suggestionComments);
 
         final ImageView image = findViewById(R.id.eSuggestionImage);
+        final ImageView arrowUp = findViewById(R.id.arrowVoteUp);
+        final ImageView arrowDown = findViewById(R.id.arrowVoteDown);
 
         final Button approveBtn = findViewById(R.id.approveBtn);
         final Button disapproveBtn = findViewById(R.id.disapproveBtn);
@@ -77,11 +88,21 @@ public class EntireSuggestionActivity extends AppCompatActivity {
         final EditText reasonEt = findViewById(R.id.reasonEt);
         final EditText yourCommentEt = findViewById(R.id.yourCommentEt);
 
+        final FloatingActionButton fab = findViewById(R.id.fab2);
+        final FloatingActionButton infoFab = findViewById(R.id.infoFab);
+        final FloatingActionButton delFab = findViewById(R.id.delFab);
+
+        final JDBCUtil jdbcUtil = new JDBCUtil(getBaseContext());
+        final SuggestionItem item = new SuggestionItem(idSuggestion, title, voteUp, voteDown, comments, status);
+
         titleTv.setText(title);
         descriptionTv.setText(description);
         voteUpTv.setText(voteUp);
         voteDownTv.setText(voteDown);
         commentTv.setText(comments);
+
+        voteUpL.setOnClickListener(view -> jdbcUtil.clickedVoteUp(item, voteUpTv, voteDownTv, arrowUp, arrowDown));
+        voteDownL.setOnClickListener(view -> jdbcUtil.clickedVoteDown(item, voteUpTv, voteDownTv, arrowUp, arrowDown));
 
         sendBtn.setOnClickListener(view -> {
             final String comment = yourCommentEt.getText().toString().trim();
@@ -105,6 +126,26 @@ public class EntireSuggestionActivity extends AppCompatActivity {
 
         approveBtn.setOnClickListener(view -> sendReason(reasonEt.getText().toString().trim(), 2));
         disapproveBtn.setOnClickListener(view -> sendReason(reasonEt.getText().toString().trim(), -1));
+
+        fab.setOnClickListener(view -> {
+            if (visible) {
+                infoFab.setVisibility(View.GONE);
+                delFab.setVisibility(View.GONE);
+            } else {
+                infoFab.setVisibility(View.VISIBLE);
+                delFab.setVisibility(View.VISIBLE);
+            }
+            visible = !visible;
+        });
+
+        infoFab.setOnClickListener(view -> {
+
+        });
+
+        delFab.setOnClickListener(view -> {
+            jdbcUtil.deleteSuggestion(idSuggestion);
+            super.onBackPressed();
+        });
 
         final ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {

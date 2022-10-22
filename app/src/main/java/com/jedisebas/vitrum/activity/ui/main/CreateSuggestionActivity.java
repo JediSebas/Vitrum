@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jedisebas.vitrum.R;
 import com.jedisebas.vitrum.util.BirthdatePicker;
+import com.jedisebas.vitrum.util.JDBCUtil;
 import com.jedisebas.vitrum.util.User;
 
 import org.intellij.lang.annotations.Language;
@@ -21,12 +22,11 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Calendar;
 
 public class CreateSuggestionActivity extends AppCompatActivity {
 
     private boolean visible = false;
-    static int idSuggestion = 0;
+    public static int idSuggestion = 0;
 
     private EditText titleEt;
     private EditText descriptionEt;
@@ -45,7 +45,9 @@ public class CreateSuggestionActivity extends AppCompatActivity {
         titleEt = findViewById(R.id.suggestionTitleEt);
         descriptionEt = findViewById(R.id.suggestionDescriptionEt);
 
-        JDBCGetSuggestion jdbcGetSuggestion = new JDBCGetSuggestion(idSuggestion);
+        final JDBCUtil jdbcUtil = new JDBCUtil(getBaseContext());
+
+        final JDBCGetSuggestion jdbcGetSuggestion = new JDBCGetSuggestion(idSuggestion);
         jdbcGetSuggestion.t.start();
 
         try {
@@ -89,10 +91,7 @@ public class CreateSuggestionActivity extends AppCompatActivity {
         });
 
         deleteFab.setOnClickListener(view -> {
-            if (idSuggestion != 0) {
-                JDBCDeleteSuggestion jdbcDeleteSuggestion = new JDBCDeleteSuggestion(idSuggestion);
-                jdbcDeleteSuggestion.t.start();
-            }
+            jdbcUtil.deleteSuggestion(idSuggestion);
             super.onBackPressed();
         });
         
@@ -177,28 +176,6 @@ public class CreateSuggestionActivity extends AppCompatActivity {
                 } else {
                     query += " NULL, '" + User.unitId + "');";
                 }
-                stmt.executeUpdate(query);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private class JDBCDeleteSuggestion implements Runnable {
-
-        private final Thread t;
-        private final int id;
-
-        JDBCDeleteSuggestion(final int id) {
-            this.id = id;
-            t = new Thread(this);
-        }
-
-        @Override
-        public void run() {
-            try (final Connection conn = DriverManager.getConnection(getString(R.string.db_url), getString(R.string.db_username), getString(R.string.db_password));
-                 final Statement stmt = conn.createStatement()) {
-                @Language("RoomSql") String query = "DELETE FROM suggestion WHERE `suggestion`.`id` = " + id + ";";
                 stmt.executeUpdate(query);
             } catch (SQLException e) {
                 e.printStackTrace();

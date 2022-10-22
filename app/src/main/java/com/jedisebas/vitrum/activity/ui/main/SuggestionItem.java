@@ -23,7 +23,7 @@ public class SuggestionItem {
         this(item.getId(), item.getTitle(), item.getVoteUp(), item.getVoteDown(), item.getComments(), item.getStatus());
     }
 
-    SuggestionItem() {
+    public SuggestionItem() {
         this(0, null, null, null, null, 0);
     }
 
