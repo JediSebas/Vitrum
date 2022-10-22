@@ -155,20 +155,8 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
         calendar.set(Calendar.YEAR, year);
         calendar.set(Calendar.MONTH, month);
         calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-        birthdate = getCorrectDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+        birthdate = BirthdatePicker.getCorrectDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
         birthdateTv.setText(birthdate);
-    }
-
-    private String getCorrectDate(final int year, int month, final int day) {
-        return year + "-" + addZero(++month) + "-" + addZero(day);
-    }
-
-    private String addZero(final int x) {
-        if (x < 10) {
-            return "0" + x;
-        } else {
-            return String.valueOf(x);
-        }
     }
 
     void setConnectionError() {

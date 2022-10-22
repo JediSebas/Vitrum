@@ -1,4 +1,8 @@
 <resources>
+    <string name="db_url" translatable="false">jdbc:mysql://192.168.1.185/vitrum</string>
+    <string name="db_username" translatable="false">user</string>
+    <string name="db_password" translatable="false">user</string>
+
     <string name="app_name" translatable="false">Vitrum</string>
     <string name="title_activity_suggestion">Suggestions</string>
     <string name="logo" translatable="false">Logo</string>
@@ -33,10 +37,6 @@
     <string name="not_all_data">Not all data!</string>
     <string name="wrong_data">Wrong data!</string>
 
-    <string name="db_url" translatable="false">jdbc:mysql://192.168.1.185/vitrum</string>
-    <string name="db_username" translatable="false">user</string>
-    <string name="db_password" translatable="false">user</string>
-
     <string name="my_suggestions">My suggestions</string>
     <string name="all_suggestions">Suggestions</string>
 
@@ -46,6 +46,20 @@
     <string name="suggestion_title">Suggestion title</string>
     <string name="suggestion_image">Suggestion image</string>
     <string name="suggestion_description">Suggestion description</string>
+    <string name="arrow_vote_up">Arrow vote up</string>
+    <string name="arrow_vote_down">Arrow vote down</string>
+    <string name="comments_icon">Comments icon</string>
+
+    <string name="approve">Approve</string>
+    <string name="disapprove">Disapprove</string>
+    <string name="reason">Reason of approve/disapprove suggestion</string>
+
+    <string name="your_comment">Write your own comment</string>
+    <string name="send">Send</string>
+    <string name="write_the_comment">Write the comment!</string>
+    <string name="write_the_reason">Write the reason!</string>
+    <string name="comment_success">Successfully send comment</string>
+    <string name="reason_success">Successfully send reason</string>
 
     <string-array name="days">
         <item>1</item>

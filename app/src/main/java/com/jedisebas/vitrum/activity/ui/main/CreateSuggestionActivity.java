@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jedisebas.vitrum.R;
+import com.jedisebas.vitrum.util.BirthdatePicker;
 import com.jedisebas.vitrum.util.User;
 
 import org.intellij.lang.annotations.Language;
@@ -44,6 +45,16 @@ public class CreateSuggestionActivity extends AppCompatActivity {
         titleEt = findViewById(R.id.suggestionTitleEt);
         descriptionEt = findViewById(R.id.suggestionDescriptionEt);
 
+        JDBCGetSuggestion jdbcGetSuggestion = new JDBCGetSuggestion(idSuggestion);
+        jdbcGetSuggestion.t.start();
+
+        try {
+            jdbcGetSuggestion.t.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            Thread.currentThread().interrupt();
+        }
+
         fab1.setOnClickListener(view -> {
             if (visible) {
                 saveFab.setVisibility(View.GONE);
@@ -62,10 +73,10 @@ public class CreateSuggestionActivity extends AppCompatActivity {
         saveFab.setOnClickListener(view -> {
             if (idSuggestion == 0) {
                 saveSuggestion(0);
-                super.onBackPressed();
             } else {
                 updateSuggestion(0);
             }
+            super.onBackPressed();
         });
 
         sendFab.setOnClickListener(view -> {
@@ -78,12 +89,11 @@ public class CreateSuggestionActivity extends AppCompatActivity {
         });
 
         deleteFab.setOnClickListener(view -> {
-            if (idSuggestion == 0) {
-                super.onBackPressed();
-            } else {
+            if (idSuggestion != 0) {
                 JDBCDeleteSuggestion jdbcDeleteSuggestion = new JDBCDeleteSuggestion(idSuggestion);
                 jdbcDeleteSuggestion.t.start();
             }
+            super.onBackPressed();
         });
         
         final ActionBar actionBar = getSupportActionBar();
@@ -161,7 +171,7 @@ public class CreateSuggestionActivity extends AppCompatActivity {
                 @Language("RoomSql") String query = "INSERT INTO `suggestion` (`id`, `title`, " +
                         "`description`, `vote_up`, `vote_down`, `id_inhabitant`, `status`, `reason`," +
                         " `datetime`, `id_gmina`, `id_powiat`) VALUES (" + id + ", '" + title + "', " +
-                        "'" + description + "', '0', '0', '" + User.id + "', '" + status + "', '', '" + getCurrentDateTime() + "',";
+                        "'" + description + "', '0', '0', '" + User.id + "', '" + status + "', '', '" + BirthdatePicker.getCurrentDateTime() + "',";
                 if (User.unit.equals("id_gmina")) {
                     query += " '" + User.unitId + "', NULL);";
                 } else {
@@ -170,24 +180,6 @@ public class CreateSuggestionActivity extends AppCompatActivity {
                 stmt.executeUpdate(query);
             } catch (SQLException e) {
                 e.printStackTrace();
-            }
-        }
-
-        private String getCurrentDateTime() {
-            final Calendar calendar = Calendar.getInstance();
-            return getCorrectDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH),
-                    calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND));
-        }
-
-        private String getCorrectDate(final int year, int month, final int day, final int hour, final int minute, final int second) {
-            return year + "-" + addZero(++month) + "-" + addZero(day) + " " + addZero(hour) + ":" + addZero(minute) + ":" + addZero(second);
-        }
-
-        private String addZero(final int x) {
-            if (x < 10) {
-                return "0" + x;
-            } else {
-                return String.valueOf(x);
             }
         }
     }

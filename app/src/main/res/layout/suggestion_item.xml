@@ -23,31 +23,73 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
 
-        <TextView
-            android:id="@+id/suggestionVoteUp"
+        <LinearLayout
+            android:id="@+id/voteUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_weight="1"
-            android:textSize="22sp" />
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/suggestionVoteDown"
+            <TextView
+                android:id="@+id/suggestionVoteUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/arrowVoteUp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow_up_white"
+                android:contentDescription="@string/arrow_vote_up" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/voteDown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_weight="1"
-            android:textSize="22sp" />
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/suggestionComments"
+            <TextView
+                android:id="@+id/suggestionVoteDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/arrowVoteDown"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow_down_white"
+                android:contentDescription="@string/arrow_vote_down" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comments"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_weight="1"
-            android:textSize="22sp" />
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/suggestionComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/comment"
+                android:contentDescription="@string/comments_icon" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -3,25 +3,15 @@ F
 app/proguard-rules.pro,9/e/9e08934d811afe28fbc77aaa3c0d747b94348db9
 @
 app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
-P
- app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
 r
 Bapp/src/main/java/com/jedisebas/vitrum/activity/LoginActivity.java,a/f/af72dec2d71861f6fbc18a0f7888ace0b74e50de
-w
-Gapp/src/main/java/com/jedisebas/vitrum/activity/SuggestionActivity.java,1/b/1b5ccf16e25e195737db59eb77f51c1c9030e455
 q
 Aapp/src/main/java/com/jedisebas/vitrum/activity/MainActivity.java,6/0/60bd0e74313198168107ff449b2d1a9ad5ead967
-p
-@app/src/main/java/com/jedisebas/vitrum/util/BirthdatePicker.java,1/1/11f3122e0a656821b20d376c7d2e498d004321c5
 v
 Fapp/src/main/java/com/jedisebas/vitrum/activity/ChoiceTwoActivity.java,f/9/f945d315591530ac68da1573172328f7e9f6767e
-v
-Fapp/src/main/java/com/jedisebas/vitrum/activity/ChoiceOneActivity.java,5/b/5bb0d5d15d004fbe26e182d5ba3c45f47af836a9
-Ö
-Uapp/src/main/java/com/jedisebas/vitrum/activity/ui/main/CreateSuggestionActivity.java,9/f/9f00775d9f5883b1f8dff70a82663334855498e2
-s
-Capp/src/main/java/com/jedisebas/vitrum/activity/SignUpActivity.java,2/0/20d06fa81a727b79d1063e5964655a8c4b161945
 e
 5app/src/main/java/com/jedisebas/vitrum/util/User.java,6/5/65073f2fb307ca9b08f582efbb9e82f8c36b4e82
 Å
 Qapp/src/main/java/com/jedisebas/vitrum/activity/ui/main/SectionsPagerAdapter.java,2/9/29d64522142a8f3e0e911872f2b87c81323a23a9
+w
+Gapp/src/main/java/com/jedisebas/vitrum/activity/SuggestionActivity.java,1/b/1b5ccf16e25e195737db59eb77f51c1c9030e455

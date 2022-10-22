@@ -18,7 +18,7 @@ import java.util.List;
 
 public class SuggestionAdapter extends ArrayAdapter<SuggestionItem> {
 
-    public SuggestionAdapter(@NonNull Context context, int resource, @NonNull List<SuggestionItem> objects) {
+    public SuggestionAdapter(@NonNull final Context context, final int resource, @NonNull final List<SuggestionItem> objects) {
         super(context, resource, objects);
     }
 

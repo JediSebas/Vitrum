@@ -1,14 +1,15 @@
 package com.jedisebas.vitrum.activity.ui.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -56,13 +57,17 @@ public class MySuggestionFragment extends Fragment {
 
         listView.setOnItemClickListener((adapterView, view, i, l) -> {
             final SuggestionItem item = (SuggestionItem) adapterView.getItemAtPosition(i);
+            final LinearLayout voteUp = view.findViewById(R.id.voteUp);
+            final LinearLayout voteDown = view.findViewById(R.id.voteDown);
+            final LinearLayout comments = view.findViewById(R.id.comments);
             final TextView titleTv = view.findViewById(R.id.suggestionTitle);
             final TextView voteUpTv = view.findViewById(R.id.suggestionVoteUp);
             final TextView voteDownTv = view.findViewById(R.id.suggestionVoteDown);
-            final TextView commentsTv = view.findViewById(R.id.suggestionComments);
             final ImageView image = view.findViewById(R.id.suggestionImage);
+            final ImageView arrowUp = view.findViewById(R.id.arrowVoteUp);
+            final ImageView arrowDown = view.findViewById(R.id.arrowVoteDown);
 
-            voteUpTv.setOnClickListener(view1 -> {
+            voteUp.setOnClickListener(view1 -> {
                 final int id = item.getId();
 
                 final JDBCCheckIsVote jdbcCheckIsVote = new JDBCCheckIsVote(id);
@@ -93,28 +98,24 @@ public class MySuggestionFragment extends Fragment {
                         final int vu = getVoteUp(id);
                         jdbcUpdateVote(id, 1);
                         jdbcSetVoteUp(id, vu + 1);
-                        Log.println(Log.ASSERT, "voteup", String.valueOf(vu));
-                        Log.println(Log.ASSERT, "voteup+1", String.valueOf(vu + 1));
                         newVoteUp = String.valueOf(Integer.parseInt(newVoteUp) + 1);
+                        arrowUp.setImageResource(R.drawable.arrow_up_green);
                     } else if (voted == 1) {
                         final int vu = getVoteUp(id);
                         jdbcUpdateVote(id, 0);
                         jdbcSetVoteUp(id, vu - 1);
-                        Log.println(Log.ASSERT, "voteup", String.valueOf(vu));
-                        Log.println(Log.ASSERT, "voteup-1", String.valueOf(vu - 1));
                         newVoteUp = String.valueOf(Integer.parseInt(newVoteUp) - 1);
+                        arrowUp.setImageResource(R.drawable.arrow_up_white);
                     } else {
                         final int vu = getVoteUp(id);
                         final int vd = getVoteDown(id);
                         jdbcUpdateVote(id, 1);
                         jdbcSetVoteUp(id, vu + 1);
                         jdbcSetVoteDown(id, vd - 1);
-                        Log.println(Log.ASSERT, "voteup", String.valueOf(vu));
-                        Log.println(Log.ASSERT, "voteup+1", String.valueOf(vu + 1));
-                        Log.println(Log.ASSERT, "votedown", String.valueOf(vd));
-                        Log.println(Log.ASSERT, "votedown-1", String.valueOf(vd - 1));
                         newVoteUp = String.valueOf(Integer.parseInt(newVoteUp) + 1);
                         newVoteDown = String.valueOf(Integer.parseInt(newVoteDown) - 1);
+                        arrowUp.setImageResource(R.drawable.arrow_up_green);
+                        arrowDown.setImageResource(R.drawable.arrow_down_white);
                     }
 
                     item.setVoteUp(newVoteUp);
@@ -124,7 +125,7 @@ public class MySuggestionFragment extends Fragment {
                 }
             });
 
-            voteDownTv.setOnClickListener(view1 -> {
+            voteDown.setOnClickListener(view1 -> {
                 final int id = item.getId();
 
                 final JDBCCheckIsVote jdbcCheckIsVote = new JDBCCheckIsVote(id);
@@ -155,28 +156,24 @@ public class MySuggestionFragment extends Fragment {
                         final int vd = getVoteDown(id);
                         jdbcUpdateVote(id, -1);
                         jdbcSetVoteDown(id, vd + 1);
-                        Log.println(Log.ASSERT, "votedown", String.valueOf(vd));
-                        Log.println(Log.ASSERT, "votedown+1", String.valueOf(vd + 1));
                         newVoteDown = String.valueOf(Integer.parseInt(newVoteDown) + 1);
+                        arrowDown.setImageResource(R.drawable.arrow_down_red);
                     } else if (voted == 1) {
                         final int vu = getVoteUp(id);
                         final int vd = getVoteDown(id);
                         jdbcUpdateVote(id, -1);
                         jdbcSetVoteUp(id, vu - 1);
                         jdbcSetVoteDown(id, vd + 1);
-                        Log.println(Log.ASSERT, "voteup", String.valueOf(vu));
-                        Log.println(Log.ASSERT, "voteup-1", String.valueOf(vu - 1));
-                        Log.println(Log.ASSERT, "votedown", String.valueOf(vd));
-                        Log.println(Log.ASSERT, "votedown+1", String.valueOf(vd + 1));
                         newVoteUp = String.valueOf(Integer.parseInt(newVoteUp) - 1);
                         newVoteDown = String.valueOf(Integer.parseInt(newVoteDown) + 1);
+                        arrowDown.setImageResource(R.drawable.arrow_down_red);
+                        arrowUp.setImageResource(R.drawable.arrow_up_white);
                     } else {
                         final int vd = getVoteDown(id);
                         jdbcUpdateVote(id, 0);
                         jdbcSetVoteDown(id, vd - 1);
-                        Log.println(Log.ASSERT, "votedown", String.valueOf(vd));
-                        Log.println(Log.ASSERT, "votedown-1", String.valueOf(vd - 1));
                         newVoteDown = String.valueOf(Integer.parseInt(newVoteDown) - 1);
+                        arrowDown.setImageResource(R.drawable.arrow_down_white);
                     }
 
                     item.setVoteUp(newVoteUp);
@@ -186,9 +183,9 @@ public class MySuggestionFragment extends Fragment {
                 }
             });
 
-//            titleTv.setOnClickListener(view1 -> startActivity(new Intent(getContext(), EntireSuggestionActivity.class)));
-//            image.setOnClickListener(view1 -> startActivity(new Intent(getContext(), EntireSuggestionActivity.class)));
-//            commentsTv.setOnClickListener(view1 -> startActivity(new Intent(getContext(), EntireSuggestionActivity.class)));
+            titleTv.setOnClickListener(view1 -> checkStatus(item.getStatus(), item.getId()));
+            image.setOnClickListener(view1 -> checkStatus(item.getStatus(), item.getId()));
+            comments.setOnClickListener(view1 -> checkStatus(item.getStatus(), item.getId()));
         });
 
         return root;
@@ -272,6 +269,16 @@ public class MySuggestionFragment extends Fragment {
         }
     }
 
+    private void checkStatus(final int status, final int idSuggestion) {
+        if (status == 0) {
+            CreateSuggestionActivity.idSuggestion = idSuggestion;
+            startActivity(new Intent(getContext(), CreateSuggestionActivity.class));
+        } else {
+            EntireSuggestionActivity.idSuggestion = idSuggestion;
+            startActivity(new Intent(getContext(), EntireSuggestionActivity.class));
+        }
+    }
+
     private class JDBCGetMySuggestion implements Runnable {
 
         private final Thread t;
@@ -289,7 +296,7 @@ public class MySuggestionFragment extends Fragment {
         public void run() {
             try (final Connection conn = DriverManager.getConnection(getString(R.string.db_url), getString(R.string.db_username), getString(R.string.db_password));
                  final Statement stmt = conn.createStatement()) {
-                @Language("RoomSql") String query = "SELECT id, title, vote_up, vote_down FROM `suggestion` " +
+                @Language("RoomSql") String query = "SELECT id, title, vote_up, vote_down, status FROM `suggestion` " +
                         "WHERE id_inhabitant = '" + User.id + "' AND " + User.unit + " = '" + User.unitId + "';";
                 final ResultSet rs = stmt.executeQuery(query);
 
@@ -307,6 +314,7 @@ public class MySuggestionFragment extends Fragment {
                     item.setVoteUp(String.valueOf(rs.getInt("vote_up")));
                     item.setVoteDown(String.valueOf(rs.getInt("vote_down")));
                     item.setComments(String.valueOf(commentsAmount));
+                    item.setStatus(rs.getInt("status"));
                     itemList.add(item);
                 }
             } catch (SQLException | InterruptedException e) {

@@ -8,21 +8,23 @@ public class SuggestionItem {
     private String voteUp;
     private String voteDown;
     private String comments;
+    private int status;
 
-    SuggestionItem(final int id, final String title, final String voteUp, final String voteDown, final String comments) {
+    SuggestionItem(final int id, final String title, final String voteUp, final String voteDown, final String comments, final int status) {
         this.id = id;
         this.title = title;
         this.voteUp = voteUp;
         this.voteDown = voteDown;
         this.comments = comments;
+        this.status = status;
     }
 
     SuggestionItem(final SuggestionItem item) {
-        this(item.getId(), item.getTitle(), item.getVoteUp(), item.getVoteDown(), item.getComments());
+        this(item.getId(), item.getTitle(), item.getVoteUp(), item.getVoteDown(), item.getComments(), item.getStatus());
     }
 
     SuggestionItem() {
-        this(0, null, null, null, null);
+        this(0, null, null, null, null, 0);
     }
 
     public int getId() {
@@ -63,5 +65,13 @@ public class SuggestionItem {
 
     public void setComments(final String comments) {
         this.comments = comments;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(final int status) {
+        this.status = status;
     }
 }

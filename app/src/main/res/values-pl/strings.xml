@@ -33,4 +33,18 @@
     <string name="suggestion_title">Tytuł propozycji</string>
     <string name="suggestion_image">Obraz propozycji</string>
     <string name="suggestion_description">Opis propozycji</string>
+    <string name="arrow_vote_up">Strzałka w górę</string>
+    <string name="arrow_vote_down">Strzałka w dół</string>
+    <string name="comments_icon">Ikona komentarzy</string>
+
+    <string name="approve">Potwierdź</string>
+    <string name="disapprove">Odrzuć</string>
+    <string name="reason">Powód potwierdzenia/odrzucenia propozycji</string>
+
+    <string name="your_comment">Napisz swój komentarz</string>
+    <string name="send">Wyślij</string>
+    <string name="write_the_comment">Napisz komentarz!</string>
+    <string name="write_the_reason">Napisz powód!</string>
+    <string name="comment_success">Przesłano komentarz</string>
+    <string name="reason_success">Przesłano powód</string>
 </resources>

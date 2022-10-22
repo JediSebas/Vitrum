@@ -16,11 +16,33 @@ public class BirthdatePicker extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable final Bundle savedInstanceState) {
-        final Calendar mCalendar = Calendar.getInstance();
-        final int year = mCalendar.get(Calendar.YEAR);
-        final int month = mCalendar.get(Calendar.MONTH);
-        final int dayOfMonth = mCalendar.get(Calendar.DAY_OF_MONTH);
+        final Calendar calendar = Calendar.getInstance();
+        final int year = calendar.get(Calendar.YEAR);
+        final int month = calendar.get(Calendar.MONTH);
+        final int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
         return new DatePickerDialog(getActivity(), R.style.MySpinnerDatePickerStyle, (DatePickerDialog.OnDateSetListener)
                 getActivity(), year, month, dayOfMonth);
+    }
+
+    public static String getCurrentDateTime() {
+        final Calendar calendar = Calendar.getInstance();
+        return getCorrectDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH),
+                calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND));
+    }
+
+    public static String getCorrectDate(final int year, int month, final int day) {
+        return year + "-" + addZero(++month) + "-" + addZero(day);
+    }
+
+    public static String getCorrectDate(final int year, int month, final int day, final int hour, final int minute, final int second) {
+        return year + "-" + addZero(++month) + "-" + addZero(day) + " " + addZero(hour) + ":" + addZero(minute) + ":" + addZero(second);
+    }
+
+    private static String addZero(final int x) {
+        if (x < 10) {
+            return "0" + x;
+        } else {
+            return String.valueOf(x);
+        }
     }
 }
