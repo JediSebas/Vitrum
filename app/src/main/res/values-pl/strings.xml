@@ -27,6 +27,8 @@
     <string name="not_all_data">Nie wszystkie dane!</string>
     <string name="wrong_data">Nieprawidłowe dane!</string>
 
+    <string name="waiting">Twoje konto jest weryfikowane.\nPo zatwierdzeniu będziesz mógł korzystać z aplikacji.</string>
+
     <string name="my_suggestions">Moje propozycje</string>
     <string name="all_suggestions">Propozycje</string>
 

@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private String password2;
     private boolean workerOfGmina;
     private boolean connectionError;
+    private boolean approved;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -74,8 +75,21 @@ public class LoginActivity extends AppCompatActivity {
                         // zrob cos z powiatem
                     } else {
                         Log.println(Log.DEBUG, "log", "mieszkaniec");
-                        startActivity(new Intent(this, SuggestionActivity.class));
-                        // cos dla zwyklego mieszkanca
+                        JDBCCheckIfApproved jdbcCheckIfApproved = new JDBCCheckIfApproved(login);
+                        jdbcCheckIfApproved.t.start();
+
+                        try {
+                            jdbcCheckIfApproved.t.join();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                            Thread.currentThread().interrupt();
+                        }
+
+                        if (approved) {
+                            startActivity(new Intent(this, SuggestionActivity.class));
+                        } else {
+                            startActivity(new Intent(this, WaitingActivity.class));
+                        }
                     }
                     Log.println(Log.DEBUG, "log", "hasla sie zgadzajo");
                 } else {
@@ -112,6 +126,10 @@ public class LoginActivity extends AppCompatActivity {
         connectionError = true;
     }
 
+    public void setApproved(final boolean approved) {
+        this.approved = approved;
+    }
+
     private class JDBCLogin implements Runnable {
 
         private final String login;
@@ -142,6 +160,32 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 setPassword2(rs.getString("password"));
+            } catch (SQLException e) {
+                setConnectionError();
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private class JDBCCheckIfApproved implements Runnable {
+
+        private final Thread t;
+        private final String login;
+
+        JDBCCheckIfApproved(final String login) {
+            this.login = login;
+            t = new Thread(this);
+        }
+
+        @Override
+        public void run() {
+            try (final Connection conn = DriverManager.getConnection(getString(R.string.db_url), getString(R.string.db_username), getString(R.string.db_password));
+                 final Statement stmt = conn.createStatement()) {
+                Log.println(Log.ASSERT, "login", login);
+                @Language("RoomSql")final String query = "SELECT approved FROM `inhabitant` WHERE email = \"" + login + "\"";
+                final ResultSet rs = stmt.executeQuery(query);
+                rs.next();
+                setApproved(rs.getBoolean("approved"));
             } catch (SQLException e) {
                 setConnectionError();
                 e.printStackTrace();

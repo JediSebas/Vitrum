@@ -94,7 +94,7 @@ public class MySuggestionFragment extends Fragment {
             try (final Connection conn = DriverManager.getConnection(getString(R.string.db_url), getString(R.string.db_username), getString(R.string.db_password));
                  final Statement stmt = conn.createStatement()) {
                 @Language("RoomSql") String query = "SELECT id, title, vote_up, vote_down, status FROM `suggestion` " +
-                        "WHERE id_inhabitant = '" + User.id + "' AND " + User.unit + " = '" + User.unitId + "';";
+                        "WHERE id_inhabitant = '" + User.id + "' AND " + User.unit + " = '" + User.unitId + "' ORDER BY id DESC;";
                 final ResultSet rs = stmt.executeQuery(query);
 
                 while (rs.next()) {

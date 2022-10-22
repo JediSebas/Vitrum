@@ -16,6 +16,10 @@
         android:theme="@style/Theme.Vitrum"
         tools:targetApi="31">
         <activity
+            android:name=".activity.WaitingActivity"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".activity.ui.main.EntireSuggestionActivity"
             android:exported="false" />
         <activity

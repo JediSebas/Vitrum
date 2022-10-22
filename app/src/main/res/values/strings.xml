@@ -37,6 +37,8 @@
     <string name="not_all_data">Not all data!</string>
     <string name="wrong_data">Wrong data!</string>
 
+    <string name="waiting">Your account is verified and after approval you will be able to use the application.</string>
+
     <string name="my_suggestions">My suggestions</string>
     <string name="all_suggestions">Suggestions</string>
 

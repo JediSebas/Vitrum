@@ -3,8 +3,6 @@ F
 app/proguard-rules.pro,9/e/9e08934d811afe28fbc77aaa3c0d747b94348db9
 @
 app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
-r
-Bapp/src/main/java/com/jedisebas/vitrum/activity/LoginActivity.java,a/f/af72dec2d71861f6fbc18a0f7888ace0b74e50de
 q
 Aapp/src/main/java/com/jedisebas/vitrum/activity/MainActivity.java,6/0/60bd0e74313198168107ff449b2d1a9ad5ead967
 v
