@@ -5,6 +5,7 @@
 
     <string name="app_name" translatable="false">Vitrum</string>
     <string name="title_activity_suggestion">Suggestions</string>
+    <string name="title_activity_worker">Worker Panel</string>
     <string name="logo" translatable="false">Logo</string>
     <string name="worker">worker</string>
     <string name="inhabitant">inhabitant</string>
@@ -41,6 +42,7 @@
 
     <string name="my_suggestions">My suggestions</string>
     <string name="all_suggestions">Suggestions</string>
+    <string name="users_account">Users account</string>
 
     <string name="fab" translatable="false">Floating action button</string>
     <string name="iv" translatable="false">Image of suggestion</string>
@@ -2361,4 +2363,6 @@
         <item>żuromiński</item>
         <item>żywiecki</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

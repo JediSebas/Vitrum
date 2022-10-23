@@ -30,6 +30,10 @@ public class BirthdatePicker extends DialogFragment {
                 calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND));
     }
 
+    public static String getDate(final int year, int month, final int day) {
+        return addZero(day) + "." + addZero(++month) + "." + year;
+    }
+
     public static String getCorrectDate(final int year, int month, final int day) {
         return year + "-" + addZero(++month) + "-" + addZero(day);
     }

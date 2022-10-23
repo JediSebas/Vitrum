@@ -101,6 +101,12 @@ public class EntireSuggestionActivity extends AppCompatActivity {
         voteDownTv.setText(voteDown);
         commentTv.setText(comments);
 
+        if (User.worker) {
+            approveBtn.setVisibility(View.VISIBLE);
+            disapproveBtn.setVisibility(View.VISIBLE);
+            reasonEt.setVisibility(View.VISIBLE);
+        }
+
         voteUpL.setOnClickListener(view -> jdbcUtil.clickedVoteUp(item, voteUpTv, voteDownTv, arrowUp, arrowDown));
         voteDownL.setOnClickListener(view -> jdbcUtil.clickedVoteDown(item, voteUpTv, voteDownTv, arrowUp, arrowDown));
 

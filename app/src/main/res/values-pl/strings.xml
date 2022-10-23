@@ -1,5 +1,6 @@
 <resources>
     <string name="title_activity_suggestion">Propozycje</string>
+    <string name="title_activity_worker">Panel pracownika</string>
     <string name="worker">pracownik</string>
     <string name="inhabitant">mieszkaniec</string>
 
@@ -31,6 +32,7 @@
 
     <string name="my_suggestions">Moje propozycje</string>
     <string name="all_suggestions">Propozycje</string>
+    <string name="users_account">Konta użytkowników</string>
 
     <string name="suggestion_title">Tytuł propozycji</string>
     <string name="suggestion_image">Obraz propozycji</string>
