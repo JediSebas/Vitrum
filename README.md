@@ -21,3 +21,6 @@ Rozwiązanie takie jest dużo prostsze niż tworzenie petycji, zbieranie podpis�
 
 ## Jak można ją rozwinąć?
 <p>Potencjał do rozwoju jest duży. Począwszy od implementacji w szkołach czy organizacjach, po politykę wojewódzką i krajową. Wypuszczenie produktu na arenę międzynarodową również jest możliwe. Wszystko zależy od funduszy i rozpowszechnienia oprogramowania.</p>
+
+# Ważne pliki
+<p>Są umieszczone w wydaniu (release) po prawej stronie.<br />Najnowsze wydanie to <a target="_blank" href="https://github.com/JediSebas/Vitrum/releases/tag/v1.0.0">v1.0.0</a></p>
