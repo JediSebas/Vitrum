@@ -2,11 +2,11 @@ package com.jedisebas.vitrum.activity.ui.worker;
 
 public class UsersItem {
 
-    private int id;
+    private long id;
     private String name;
     private String surname;
 
-    public UsersItem(final int id, final String name, final String surname) {
+    public UsersItem(final long id, final String name, final String surname) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -16,11 +16,11 @@ public class UsersItem {
         this(0, null, null);
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(final int id) {
+    public void setId(final long id) {
         this.id = id;
     }
 

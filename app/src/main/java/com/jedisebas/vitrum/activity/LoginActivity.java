@@ -6,7 +6,6 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -70,15 +69,12 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (password.equals(password2)) {
                     if (worker && workerOfGmina) {
-                        Log.println(Log.DEBUG, "log", "pracownik gminy");
                         User.unit = "id_gmina";
                         startActivity(new Intent(this, WorkerActivity.class));
                     } else if (worker) {
-                        Log.println(Log.DEBUG, "log", "pracownik powiatu");
                         User.unit = "id_powiat";
                         startActivity(new Intent(this, WorkerActivity.class));
                     } else {
-                        Log.println(Log.DEBUG, "log", "mieszkaniec");
                         JDBCCheckIfApproved jdbcCheckIfApproved = new JDBCCheckIfApproved(login);
                         jdbcCheckIfApproved.t.start();
 
@@ -95,7 +91,6 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(new Intent(this, WaitingActivity.class));
                         }
                     }
-                    Log.println(Log.DEBUG, "log", "hasla sie zgadzajo");
                 } else {
                     Toast.makeText(this, getString(R.string.wrong_data), Toast.LENGTH_SHORT).show();
                 }
@@ -149,7 +144,7 @@ public class LoginActivity extends AppCompatActivity {
             try (final Connection conn = DriverManager.getConnection(getString(R.string.db_url), getString(R.string.db_username), getString(R.string.db_password));
                  final Statement stmt = conn.createStatement()) {
                 Log.println(Log.ASSERT, "login", login);
-                @Language("RoomSql")final String query1 = "SELECT password, worker_of_gmina, id_gmina, id_powat FROM `worker` WHERE login = \"" + login + "\"";
+                @Language("RoomSql")final String query1 = "SELECT password, worker_of_gmina, id_gmina, id_powiat FROM `worker` WHERE login = \"" + login + "\"";
                 @Language("RoomSql")final String query2 = "SELECT password, " + User.unit + ", id FROM `inhabitant` WHERE email = \"" + login + "\"";
                 final ResultSet rs;
                 if (worker) {
@@ -165,7 +160,7 @@ public class LoginActivity extends AppCompatActivity {
                     rs = stmt.executeQuery(query2);
                     rs.next();
                     User.unitId = rs.getInt(User.unit);
-                    User.id = rs.getInt("id");
+                    User.id = rs.getLong("id");
                 }
 
                 setPassword2(rs.getString("password"));

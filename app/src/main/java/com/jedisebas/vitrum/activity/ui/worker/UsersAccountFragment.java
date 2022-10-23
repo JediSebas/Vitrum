@@ -72,7 +72,11 @@ public class UsersAccountFragment extends Fragment {
                 @Language("RoomSql") final String query = "SELECT id, name, surname FROM `inhabitant` WHERE " + User.unit + " = " + User.unitId + " ORDER BY approved ASC;";
                 final ResultSet rs = stmt.executeQuery(query);
                 while (rs.next()) {
-                    itemList.add(new UsersItem(rs.getInt("id"), rs.getString("name"), rs.getString("surname")));
+                    final UsersItem item = new UsersItem();
+                    item.setId(rs.getLong("id"));
+                    item.setName(rs.getString("name"));
+                    item.setSurname(rs.getString("surname"));
+                    itemList.add(item);
                 }
             } catch (SQLException e) {
                 e.printStackTrace();

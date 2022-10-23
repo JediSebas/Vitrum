@@ -1,5 +1,5 @@
 <resources>
-    <string name="db_url" translatable="false">jdbc:mysql://192.168.1.185/vitrum</string>
+    <string name="db_url" translatable="false">jdbc:mysql://192.168.1.224/vitrum</string>
     <string name="db_username" translatable="false">user</string>
     <string name="db_password" translatable="false">user</string>
 
@@ -64,6 +64,8 @@
     <string name="write_the_reason">Write the reason!</string>
     <string name="comment_success">Successfully send comment</string>
     <string name="reason_success">Successfully send reason</string>
+
+    <string name="select_image">Select image</string>
 
     <string-array name="days">
         <item>1</item>
@@ -2363,6 +2365,4 @@
         <item>żuromiński</item>
         <item>żywiecki</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

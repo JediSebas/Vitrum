@@ -11,13 +11,7 @@ v
 Fapp/src/main/java/com/jedisebas/vitrum/activity/ChoiceOneActivity.java,5/b/5bb0d5d15d004fbe26e182d5ba3c45f47af836a9
 É
 Sapp/src/main/java/com/jedisebas/vitrum/activity/ui/main/comment/CommentAdapter.java,4/c/4c6dda47988d3315148b0147ba7ee6e9f4cec6cf
-s
-Capp/src/main/java/com/jedisebas/vitrum/activity/SignUpActivity.java,2/0/20d06fa81a727b79d1063e5964655a8c4b161945
 Ä
 Papp/src/main/java/com/jedisebas/vitrum/activity/ui/main/comment/CommentItem.java,3/3/33d84c4d2bd51cd3270d6c51fd1f5af90de46a2f
 t
 Dapp/src/main/java/com/jedisebas/vitrum/activity/WaitingActivity.java,9/3/93b40f7ad5f1eae378673ed65a697148ec408bcc
-Ö
-Uapp/src/main/java/com/jedisebas/vitrum/activity/ui/main/CreateSuggestionActivity.java,9/f/9f00775d9f5883b1f8dff70a82663334855498e2
-Å
-Qapp/src/main/java/com/jedisebas/vitrum/activity/ui/main/SectionsPagerAdapter.java,2/9/29d64522142a8f3e0e911872f2b87c81323a23a9

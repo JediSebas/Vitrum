@@ -51,4 +51,6 @@
     <string name="write_the_reason">Napisz powód!</string>
     <string name="comment_success">Przesłano komentarz</string>
     <string name="reason_success">Przesłano powód</string>
+
+    <string name="select_image">Wybierz zdjęcie</string>
 </resources>

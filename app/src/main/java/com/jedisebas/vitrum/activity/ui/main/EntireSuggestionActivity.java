@@ -274,7 +274,7 @@ public class EntireSuggestionActivity extends AppCompatActivity {
                     while (rs.next()) {
                         final CommentItem item = new CommentItem();
 
-                        final JDBCGetNameAndSurname jdbcGetNameAndSurname = new JDBCGetNameAndSurname(rs.getInt("id_inhabitant"));
+                        final JDBCGetNameAndSurname jdbcGetNameAndSurname = new JDBCGetNameAndSurname(rs.getLong("id_inhabitant"));
                         jdbcGetNameAndSurname.t.start();
                         jdbcGetNameAndSurname.t.join();
 
@@ -304,9 +304,9 @@ public class EntireSuggestionActivity extends AppCompatActivity {
             private class JDBCGetNameAndSurname implements Runnable {
 
                 private final Thread t;
-                private final int id;
+                private final long id;
 
-                JDBCGetNameAndSurname(final int id) {
+                JDBCGetNameAndSurname(final long id) {
                     this.id = id;
                     t = new Thread(this);
                 }

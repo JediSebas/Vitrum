@@ -23,13 +23,13 @@ import java.util.Calendar;
 
 public class UserActivity extends AppCompatActivity {
 
-    static int id;
+    static long id;
     private String name;
     private String surname;
     private String birthdate;
     private String town;
     private String street;
-    private int number;
+    private String number;
     private String postCode;
     private String post;
 
@@ -119,7 +119,7 @@ public class UserActivity extends AppCompatActivity {
         this.street = street;
     }
 
-    void setNumber(final int number) {
+    void setNumber(final String number) {
         this.number = number;
     }
 
@@ -151,7 +151,7 @@ public class UserActivity extends AppCompatActivity {
                     setBirthdate(rs.getDate("birthdate"));
                     setTown(rs.getString("town"));
                     setStreet(rs.getString("street"));
-                    setNumber(rs.getInt("number"));
+                    setNumber(rs.getString("number"));
                     setPostCode(rs.getString("post_code"));
                     setPost(rs.getString("post"));
                 }

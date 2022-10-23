@@ -1,12 +1,29 @@
 package com.jedisebas.vitrum.activity.ui.main;
 
+import static android.os.Build.VERSION.SDK_INT;
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.app.Activity;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.Settings;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -17,6 +34,8 @@ import com.jedisebas.vitrum.util.User;
 
 import org.intellij.lang.annotations.Language;
 
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -30,6 +49,26 @@ public class CreateSuggestionActivity extends AppCompatActivity {
 
     private EditText titleEt;
     private EditText descriptionEt;
+    private ImageView suggestionImage;
+
+    private final ActivityResultLauncher<Intent> startForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == Activity.RESULT_OK) {
+                    final Intent data = result.getData();
+
+                    if (data != null) {
+                        final Uri uri = data.getData();
+
+                        try {
+                            final InputStream inputStream = getContentResolver().openInputStream(uri);
+                            final Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                            runOnUiThread(() -> suggestionImage.setImageBitmap(bitmap));
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            });
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -44,6 +83,7 @@ public class CreateSuggestionActivity extends AppCompatActivity {
 
         titleEt = findViewById(R.id.suggestionTitleEt);
         descriptionEt = findViewById(R.id.suggestionDescriptionEt);
+        suggestionImage = findViewById(R.id.suggestionImageIv);
 
         final JDBCUtil jdbcUtil = new JDBCUtil(getBaseContext());
 
@@ -90,6 +130,25 @@ public class CreateSuggestionActivity extends AppCompatActivity {
             super.onBackPressed();
         });
 
+        cameraFab.setOnClickListener(view -> {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                checkPermission();
+            } else {
+                final Intent getIntent = new Intent(Intent.ACTION_GET_CONTENT);
+                getIntent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+                getIntent.setType("image/*");
+
+                final Intent pickIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                pickIntent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+                pickIntent.setType("image/*");
+
+                final Intent chooserIntent = Intent.createChooser(getIntent, getString(R.string.select_image));
+                chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[] {pickIntent});
+
+                startForResult.launch(chooserIntent);
+            }
+        });
+
         deleteFab.setOnClickListener(view -> {
             jdbcUtil.deleteSuggestion(idSuggestion);
             super.onBackPressed();
@@ -108,6 +167,19 @@ public class CreateSuggestionActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void checkPermission() {
+        if (SDK_INT >= Build.VERSION_CODES.R) {
+            if (!Environment.isExternalStorageManager()) {
+                final Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+                final Uri uri = Uri.fromParts("package", getPackageName(), null);
+                intent.setData(uri);
+                startActivity(intent);
+            } else {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+            }
+        }
     }
 
     private void saveSuggestion(final int status) {
